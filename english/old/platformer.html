@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Laura Rosas</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="StyleSheet" href="../../css/estilo.css" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+    <link rel="icon" href="../../img/icono.ico"/>
+</head>
+
+<body>
+    <div id="container">
+        <!-- CABECERA -->
+        <header>
+            <div class="row justify-content-center">
+                <div class="col-9 align-self-center">
+                    <h1>Portfolio</h1>
+                </div>
+            </div>
+        </header>
+        <!-- BARRA DE NAVEGACIÓN -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark"> <a class="navbar-brand" href="../index.html">Main</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"> <a class="nav-link" href="../projects.html">Projects</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="../about.html">About</a> </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- CONTENIDO CENTRAL -->
+        <section>
+            <header>
+                <h2>2D Platformer</h2>
+            </header>
+            <div class="row-5">
+                <article>
+                    <h2>Technical details</h2>
+                    <p>Developed in Unity</p>
+                    <p>Single-player</p>
+                    <p>Genre: 2D Platformer</p>
+                    <p>Platform: Computer</p>
+                </article>
+            </div>
+            
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Summary</h2>
+                        <p>This computer game is a 2D platformer with a system that generates the level as you play, making each time you play different.</p>
+                        <p>The game is infinite in that the level is constantly generated and has no end, the only way to end it is to die.</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../../img/Platformer/Screenshot.png" alt="Screenshot" style="width:90%;">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Mechanics</h2>
+                        <p>The player can move around the level with the "A" and "D" keys, for jumping it's the space key. The camera follows the player on the X-axis with an offset so that you can see the platforms better. In addition, the camera has a delay effect when it follows the player's character.</p>
+                        <p>The playable character has a health system, which is shown by a bar in the upper left corner.</p>
+                        <p>In the top right corner the player's score is displayed and below it the number of coins collected. The score is calculated from the coins collected.</p>
+                        <p>The game also has platforms that move horizontally and vertically from one point to another.</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../img/old/hud.png" alt="HUD" style="width:90%;">
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Dangers</h2>
+                        <p>There are two types of dangers in the game: falling into the void, which kills you instantly, and enemies, which takes some of your life.</p>
+                        <p>Enemies can move in two different ways: up and down, between platforms, to make jumping more difficult, and from right to left, on slightly longer platforms, so that you don't stay on those platforms for too long and force you to move faster to avoid losing life.</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../../img/Platformer/enemigos.png" alt="Peligros" style="width:90%;">
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Level generation</h2>
+                        <p>The level is generated with a system of blocks. The blocks are created in advance (they are prefabs). Each block has a start point, an end point, an exit zone and a death zone.</p>
+                        <p>The start point is the point from which the block is generated. The end point is where the next block is generated. The starting point of a block would be where the end point of the previous block is.</p>
+                        <p>The exit zone is after the end point. Once the player passes through the exit zone, the block they have just passed through will be destroyed and a new one will be created next to the ones already on the map.</p>
+                        <p>The death zone is the fall into the void. It is below the camera's view and kills the player's character if they pass through it. </p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../img/old/bloque.png" alt="Bloque" style="width:90%;">
+                </div>
+            </div>
+            
+            <div class="row-5">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/5wd7PQHkAl8" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                <article>
+                    <h4>Credits</h4>
+                    <p>Programming: Laura Rosas Mediavilla</p>
+                    <p>Music: <a href="https://freesound.org/" target="_blank" rel="noopener noreferrer">freesound</a> </p>
+                </article>
+                </div>
+            </div>
+
+        </section>
+        <!-- PIE -->
+        <footer>
+            <ul>
+                <li>email: <a>laurarmediavilla@gmail.com</a></li>
+                <li>itch.io: <a href="https://tortubob.itch.io/" target="_blank" rel="noopener noreferrer">Laura Rosas</a></li>
+                <li>Web created by Laura Rosas Mediavilla</li>
+            </ul>
+        </footer>
+    </div>
+    <!--jQuery first, then Popper.js, then Bootstrap JS  -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <div id="ultimo"></div>
+    
+</body>
+
+</html>

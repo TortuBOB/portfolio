@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Laura Rosas</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="StyleSheet" href=".././../css/estilo.css" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+    <link rel="icon" href="../../img/icono.ico"/>
+</head>
+
+<body>
+    <div id="container">
+        <!-- CABECERA -->
+        <header>
+            <div class="row justify-content-center">
+                <div class="col-9 align-self-center">
+                    <h1>Portfolio</h1>
+                </div>
+            </div>
+        </header>
+        <!-- BARRA DE NAVEGACIÓN -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark"> <a class="navbar-brand" href="../index.html">Main</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"> <a class="nav-link" href="../projects.html">Projects</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="../about.html">About</a> </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- CONTENIDO CENTRAL -->
+        <section>
+            <header>
+                <h2>3D Physics</h2>
+            </header>
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Summary</h2>
+                        <p>This is the first project using the Bullet physics library. In this project a 3D scenario is set up with objects that simulate physics in different ways to learn how to use this library.</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../../img/fisicas/Captura.png" alt="Captura" style="width:100%;">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Entities and Sensors</h2>
+                        <p>An entity is an object made up of a rigid body and a 3D model. There are three types of entities: cubes, cylinders and spheres.</p>
+                        <p>The physical part of the entity, the rigidbody, can be dynamic, which simulates physics (gravity, moves upon collision...), static, which cannot move, and kinematic, which does not simulate physics, but can move.</p>
+                        <p>A sensor is an object that detects collisions, but unlike an entity, it can be passed through. Sensors are cube-shaped and can be invisible or have a 3D model.</p>
+                        <p>There is a key that is a sensor, which is used to open a door. In this case it has a visible part (a model of a key) and the cube that detects collisions which is just the right size to occupy the whole model.</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../../img/fisicas/entidades.png" alt="Entidad" style="width:100%;">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Car</h2>
+                        <p>A car is an object made up of several entities. The body is a cube and then it has four wheels which are cylinders. It also has two cylinders between the body and the front wheels, while the rear wheels are attached to the car directly. All these entities are dynamic.</p>
+                        <p>The car can be controlled with "WASD". When the user presses the "W" key all the wheels start to rotate, and thanks to the friction with the ground the car moves. With "S" they rotate, but in the opposite direction to move backwards. The "A" and "D" keys turn the front cylinders that connect the body to the wheels, causing the wheels to turn, and so the car moves forward to the right or left.</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../../img/fisicas/car.gif" alt="Coches" style="width:80%;">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Door and Platform</h2>
+                        <p>The door is composed of a dynamic cube entity and a static cylinder. Both are joined together and when the user takes the key, a motor that makes the door rotate on the cylinder is activated, opening it.</p>
+                        <p>The platform, which is used to cross a hole, consists of a kinematic cube and an invisible sensor. The sensor is on top of the platform and when the car touches it, the platform crosses the hole.</p>
+                    </article>
+                    <article>
+                        <h2>Scene</h2>
+                        <p>The scene takes care of creating the camera and the light. Apart from this it generates all the scenery; the floor, the walls, and the rest of the objects.</p>
+                        <p>The scene is also responsible for checking for collisions between sensors and the corresponding objects, and takes appropriate action when detected.</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../../img/fisicas/door.gif" alt="Escena" style="width:80%;">
+                </div>
+            </div>
+            
+            <div class="row-5">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/0PAhVbjoIFs" title="Físicas 3D en C++" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            
+            <div class="row">
+                <div class="col-sm-6">
+                    <article>
+                        <h2>Libraries</h2>
+                        <p><a href="https://www.sfml-dev.org/" target="_blank" rel="noopener noreferrer">SFML</a> to create the window</p>
+                        <p><a href="https://github.com/bulletphysics/bullet3" target="_blank" rel="noopener noreferrer">Bullet Physics</a> to simulate physics</p>
+                        <p><a href="https://bitbucket.org/angel-esne/opengl-toolkit/src/master/" target="_blank" rel="noopener noreferrer">OpenGl-Toolkit</a> for the render system</p>
+                        <p><a href="https://github.com/g-truc/glm" target="_blank" rel="noopener noreferrer">GLM</a> for mathematical calculations</p>
+                        <p><a href ="https://sketchfab.com/3d-models/key-655394e6b4634d5fa60356e64624521b " target="_blank" rel="noopener noreferrer">Key model</a></p>
+                    </article>
+                </div>
+            </div>
+
+        </section>
+        <!-- PIE -->
+        <footer>
+            <ul>
+                <li>email: <a>laurarmediavilla@gmail.com</a></li>
+                <li>itch.io: <a href="https://tortubob.itch.io/" target="_blank" rel="noopener noreferrer">Laura Rosas</a></li>
+                <li>Web created by Laura Rosas Mediavilla</li>
+            </ul>
+        </footer>
+    </div>
+    <!--jQuery first, then Popper.js, then Bootstrap JS  -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <div id="ultimo"></div>
+    
+</body>
+
+</html>

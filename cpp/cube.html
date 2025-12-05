@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Laura Rosas</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="StyleSheet" href="../css/estilo.css" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+    <link rel="icon" href="../img/icono.ico"/>
+</head>
+
+<body>
+    <div id="container">
+        <!-- CABECERA -->
+        <header>
+            <div class="row justify-content-center">
+                <div class="col-9 align-self-center">
+                    <h1>Portfolio</h1>
+                </div>
+            </div>
+        </header>
+        <!-- BARRA DE NAVEGACIÓN -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark"> <a class="navbar-brand" href="../index.html">Main</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"> <a class="nav-link" href="../projects.html">Proyectos</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="../about.html">About</a> </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- CONTENIDO CENTRAL -->
+        <section>
+            <header>
+                <h2>Cube Engine</h2>
+            </header>
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Resumen</h2>
+                        <p>Este proyecto tiene dos partes. Por un lado, está un proyecto de biblioteca estática que tiene toda la lógica. Por el otro, está un proyecto que utiliza esa biblioteca para montar un escenario 3D con cubos y físicas.</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../img/cube/captura.png" alt="Captura" style="width:100%;">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Window y Scene</h2>
+                        <p>La clase que se encarga de generar la ventana utiliza como base <a href="https://bitbucket.org/angel-esne/sdl2-examples/src/master/4%20graphics%20engine/" target="_blank" rel="noopener noreferrer">este proyecto</a> y esta modificado para incluir algunas funcionalidades extra (para que el proyecto pueda emitir sonidos). En esta clase también están los eventos de teclado, para la interacción del usuario.</p>
+                        <p>La escena se encarga de crear todas las tareas necesarias para el funcionamiento del programa, por ejemplo, inicializar el sistema de físicas. Aparte de esto puede leer un archivo XML para crear una escena. </p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../img/cube/xml.png" alt="XML" style="width:100%;">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Kernel y Task</h2>
+                        <p>El kernel es el encargado de ejecutar todas las tareas, tiene una lista y las ejecuta en el orden en el que están en la lista.</p>
+                        <p>Las tares heredan de una clase abstracta llamada Task. Hay cuatro tareas:</p>
+                        <ul>
+                        <li>InputTask: se encarga de gestionar los eventos, como cerrar la ventana o el teclado, mandando mensajes.</li>
+                        <li>MessageDispatcher: se encarga de procesar los mensajes.</li>
+                        <li>PhysicsSystem: se encarga de hacer la simulación de las físicas, actualiza la posición y rotación de los objetos que no son estáticos. También comprueba las colisiones entre los objetos físicos.</li>
+                        <li>RenderSystem: se encarga de renderizar los objetos, que se vean en escena.</li>
+                        </ul>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../img/cube/kernel.png" alt="Task" style="width:100%;">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Entity y Components</h2>
+                        <p>Una entidad es un objeto que está compuesto por componentes.</p>
+                        <p>Hay muchos tipos de componentes, todos ellos heredan de una clase abstracta que se llama Component.</p>
+                        <ul>
+                        <li>TransformComponent: el componente que representa la posición, rotación y escala de las entidades. Todas las entidades tienen este componente.</li>
+                        <li>CameraComponent: este componente indica que la entidad es una cámara. </li>
+                        <li>LightComponent: es el componente que representa la luz</li>
+                        <li>RenderableComponent: es el componente que se muestra por pantalla, el modelo (un cubo).</li>
+                        <li>PhysicsComponent: es el componente de físicas, con un rigidbody cubico. Tiene un id que sirve para detectar colisiones si se quiere realizar alguna acción ante estas</li>
+                        <li>PlayerComponent: esta clase permite al usuario mover a un cubo con las teclas “WASD”, usando el sistema de físicas.</li>
+                        </ul>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../img/cube/comp.png" alt="Components" style="width:100%;">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Mensajería</h2>
+                        <p>El sistema de mensajería está compuesto por tres clases principales:</p>
+                        <ul>
+                        <li>Message: un mensaje está compuesto por su target, a quien va dirigido, y su acción, ya que un target puede realizar varias acciones. Por ejemplo, para los eventos que mueven al personaje jugable, para determinar la dirección a la que se debe aplicar la fuerza.</li>
+                        <li>MessageObserver: es una clase abstracta que recibe un mensaje. Las clases que heredan de esta sobrescriben una función que recibe el mensaje para hacer distintas acciones.</li>
+                        <li>MessageDispatcher: esta clase es la tarea que se encarga de recibir los mensajes y mandarlos a los distintos observer.</li>
+                        </ul>
+                        <p>Hay varias clases que heredan del MessageObserver:</p>
+                        <ul>
+                        <li>CloseMessage: se encarga de cerrar la ventana.</li>
+                        <li>SoundMessage: se encarga de generar un sonido cuando el sistema de físicas detecta un impacto entre el jugador y una pared (gracias a la id).</li>
+                        <li>PlayerComponent: este componente de la entidad recibe mensajes del InputTask para saber que teclas se han pulsado.</li>
+                        </ul>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../img/cube/mensaje.png" alt="Mensajes" style="width:100%;">
+                </div>
+                
+            </div>
+
+            <div class="row-5">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/LVqOZmYeu_Q" title="Cube Engine" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            
+            <div class="row-5">
+                <article>
+                    <h3>Proyecto aquí:</h3>
+                    <a href="https://github.com/TortuBOB/CubeEngine" target="_blank" rel="noopener noreferrer"><img class= "hover" src="../img/GitHub.png" alt="LogoGitHub" width="300"></a>
+                </article>
+            </div>
+            
+            <div class="row">
+                <div class="col-sm-6">
+                    <article>
+                        <h2>Bibliotecas</h2>
+                        <p><a href="https://www.libsdl.org/ " target="_blank" rel="noopener noreferrer">SDL2</a> para crear la ventana</p>
+                        <p><a href="https://github.com/libsdl-org/SDL_mixer/releases" target="_blank" rel="noopener noreferrer">SDL2-Mixer</a> para los sonidos</p>
+                        <p><a href="https://github.com/bulletphysics/bullet3" target="_blank" rel="noopener noreferrer">Bullet Physics</a> para las físicas</p>
+                        <p><a href="https://bitbucket.org/angel-esne/opengl-toolkit/src/master/" target="_blank" rel="noopener noreferrer">OpenGl-Toolkit</a> para el sistema de render</p>
+                        <p><a href="https://rapidxml.sourceforge.net/" target="_blank" rel="noopener noreferrer">RapidXML</a> para leer archivos XML</p>
+                    </article>
+                </div>
+            </div>
+
+        </section>
+        <!-- PIE -->
+        <footer>
+            <ul>
+                <li>email: <a>laurarmediavilla@gmail.com</a></li>
+                <li>itch.io: <a href="https://tortubob.itch.io/" target="_blank" rel="noopener noreferrer">Laura Rosas</a></li>
+                <li>Web creada por Laura Rosas Mediavilla</li>
+            </ul>
+        </footer>
+    </div>
+    <!--jQuery first, then Popper.js, then Bootstrap JS  -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <div id="ultimo"></div>
+    
+</body>
+
+</html>

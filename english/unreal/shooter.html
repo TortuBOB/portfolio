@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Laura Rosas</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="StyleSheet" href="../../css/estilo.css" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+    <link rel="icon" href="../../img/icono.ico"/>
+</head>
+
+<body>
+    <div id="container">
+        <!-- CABECERA -->
+        <header>
+            <div class="row justify-content-center">
+                <div class="col-9 align-self-center">
+                    <h1>Portfolio</h1>
+                </div>
+            </div>
+        </header>
+        <!-- BARRA DE NAVEGACIÓN -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark"> <a class="navbar-brand" href="../index.html">Main</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"> <a class="nav-link" href="../projects.html">Projects</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="../about.html">About</a> </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- CONTENIDO CENTRAL -->
+        <section>
+            <header>
+                <h2>Multiplayer FPS</h2>
+            </header>
+            <div class="row-5">
+                <article>
+                    <h2>Technical details</h2>
+                    <p>Developed in Unreal Engine 4 with blueprints</p>
+                    <p>Multiplayer</p>
+                    <p>Platform: Computer</p>
+                </article>
+
+            </div>
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Summary</h2>
+                        <p>This project consists of a multiplayer First Person Shooter game developed in Unreal Engine with the blueprints system.
+                        </p>
+                        <p>The game uses the First Person Shooter (FPS) project that comes with Unreal as a base. It has the basic mechanics of an FPS, the movement, the camera and the shooting. To this base, other mechanics are added.
+                        </p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../../img/Shooter/juego.png" alt="Juego" style="width:100%;">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Health system</h2>
+                        <p>The player has a health bar that drops if another player shoots them. If the player runs out of life they will die, a death screen will appear with a 10-second countdown. Once the seconds have passed, the death screen disappears and the player returns to full health.</p>
+                        <p>If a player's health drops below 30%, the player can press the middle mouse button to use a potion. This will give 70 health points, but has a cooldown of 60 seconds.</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../../img/Shooter/muerte.png" alt="Salud" style="width:100%;">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Energy and types of weapons</h2>
+                        <p>The player has an energy system that is necessary to perform certain actions. If they do not have enough energy, they will not be able to perform the actions. </p>
+                        <p>The player recovers ten energy points per second and has a maximum of 100 energy points. </p>
+                        <p>There are displays in the game where you can change the type of weapon, although only the colour of the weapon changes.</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../../img/Shooter/armas.png" alt="Energia" style="width:100%;">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Types of shots</h2>
+                        <p>There are two types of shots:</p>
+                        <p>Normal shot (left click): used to attack other players. It consumes 10 energy points. This type of shooting has limited bullets and loaders. At the start of the game the player has 10 bullets and one loader.</p>
+                        <p>When the active bullets run out, a message will appear on the screen with the key to reload (only if you have loaders). When reloading, a loader is used up and you will have 10 bullets again. The maximum number of loaders you can have is 4. To get loaders, the player will have to hit two consecutive shots at the other player.</p>
+                        <p>Area shot (right click): used to destroy covers. It consumes 70 energy points and has a cooldown of 30 seconds.</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../../img/Shooter/recarga.png" alt="Disparos" style="width:100%;">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Damage types</h2>
+                        <p>The game has three types of damage: ice, fire and physical.  To select the damage type, press buttons 1 (physical damage), 2 (fire damage) and 3 (ice damage). To show the change there are icons in the UI that change their opacity depending on the type of damage.</p>
+                        <p>If a player receives several bullets of the same damage type in a row, he develops immunity. The first bullet does 100% damage, the second 50%, the third 25% and the fourth would no longer do any damage.</p>
+                        <p>As soon as a bullet hits the player a 15 second timer will start. During these seconds the immunity (or damage decrease) will be fulfilled. As soon as the time is up, it will return to 100% damage of that type.</p>
+                        <p>If the attacking player changes damage type, the immunity time will be reset and he will receive 100% damage.</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../../img/Shooter/damage.gif" alt="Daño" style="width:100%;">
+                </div> 
+            </div>
+            
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Main menu and interface</h2>
+                        <p>At the start of the game there is a main menu where you can choose whether to create a game or join. In addition, there is a button to exit. Once a game has been created, another player can join. As soon as a player creates a match, that player appears on the map and can interact with the elements of the scenario. When a client logs in, they can fight.</p>
+                        <p>The player can pause the game with the "P" key. When the pause menu is active the player will not be able to interact with anything apart from the menu. The menu has only one button to return to the game.</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../../img/Shooter/menu.png" alt="Menu" style="width:100%;">
+                </div> 
+            </div>
+
+            <div class="row-5">
+                <iframe width="560" height="630" src="https://www.youtube.com/embed/L__f5PzFdJU" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+        </section>
+        <!-- PIE -->
+        <footer>
+            <ul>
+                <li>email: <a>laurarmediavilla@gmail.com</a></li>
+                <li>itch.io: <a href="https://tortubob.itch.io/" target="_blank" rel="noopener noreferrer">Laura Rosas</a></li>
+                <li>Web created by Laura Rosas Mediavilla</li>
+            </ul>
+        </footer>
+    </div>
+    <!--jQuery first, then Popper.js, then Bootstrap JS  -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <div id="ultimo"></div>
+    
+</body>
+
+</html>

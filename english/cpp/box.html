@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Laura Rosas</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="StyleSheet" href="../../css/estilo.css" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+    <link rel="icon" href="../../img/icono.ico"/>
+</head>
+
+<body>
+    <div id="container">
+        <!-- CABECERA -->
+        <header>
+            <div class="row justify-content-center">
+                <div class="col-9 align-self-center">
+                    <h1>Portfolio</h1>
+                </div>
+            </div>
+        </header>
+        <!-- BARRA DE NAVEGACIÓN -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark"> <a class="navbar-brand" href="../index.html">Main</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"> <a class="nav-link" href="../projects.html">Projects</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="../about.html">About</a> </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- CONTENIDO CENTRAL -->
+        <section>
+            <header>
+                <h2>2D Physics</h2>
+            </header>
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Summary</h2>
+                        <p>This project is the first one made with C++ in Visual Studio. It consists of a 2D physics simulation using the Box2D physics library.</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../../img/fisicas/2captura.png" alt="Captura" style="width:100%;">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Entities and Motors</h2>
+                        <p>An entity can be an object made of a rigid body and a geometric figure. There are two of these entities: circular entities and rectangular entities. In addition, there is the sensor entity, which is a square with no visible part and which detects collisions when another body passes through it.</p>
+                        <p>The rigid body can be dynamic, which simulates physics (gravity, moves upon collision...), static, which cannot move, and kinematic, which does not simulate physics, but can move.</p>
+                        <p>There are entities that create other types of polygons. Firstly, there is the chain entity, which creates the physical part of a polygon from its vertices. Then, there is the polygonal entity, which creates the visible part of the polygon in the same way, with vertices.</p>
+                        <p>The motors join two entities together and if activated, these entities will rotate around a point. You can set the speed at which it moves and a limit angle of movement. 
+                        </p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../../img/fisicas/entity.gif" alt="Entidad" style="width:100%;">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Car</h2>
+                        <p>The car is made up of several entities and motors. Its body is a rectangle to which the two wheels and a tipper, formed by a circle and three rectangles, are joined by motors. All the entities of the car are dynamic.</p>
+                        <p>There are motors that only are used to hold the objects together and others that are used for the movement and use of the tipper. The wheels rotate using the motor that connects them to the body, the movement is produced by the friction with the ground.</p>
+                        <p>The tipper is moved by three motors, which connect each rectangle with the body, and uses the position of the circle between the tipper and the body as a pivot point. This is done this way to make the movement better. The rest of the motors are only used to join the remaining parts of the car.</p>
+                        <p>The car moves with the "A" and "D" keys to the left and right, and the "S" key is for braking. The space key is used to activate the tipper, if it is down it will go up, otherwise it will return to the initial position.</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../../img/fisicas/2car.gif" alt="Coche" style="width:100%;">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Platform and Tower</h2>
+                        <p>The platform consists of two kinematic rectangles and a sensor. The platform is initially outside the window, and appears when the car touches a sensor attached to the right edge of the window. Once the car gets on top of it, the platform sensor is activated, which makes it go up to the higher area.</p>
+                        <p>The tower is made up of three rectangles and a circle. Two of the rectangles are dynamic, the circle and one of the rectangles is static, with no collision, it can be passed through. It also has ten dynamic circles. When the car touches the sensor on the right edge of the window, the tower activates and drops the dynamic circles, dropping them onto the car.</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../../img/fisicas/tower.gif" alt="Torre" style="width:100%;">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Particle system</h2>
+                        <p>The particle system is made up of an emitter, which is the point from which the particles come out, and a number of particles, including a list of active and inactive particles. The particles are circles that have a size, lifetime, velocity and colour.</p>
+                        <p>At the beginning all particles are inactive and are activated periodically until they are all active, so that they do not appear all at once.</p>
+                        <p>The particle system has a maximum and a minimum particle size, so the particles are of different sizes, between these values. The same is true for the lifetime and velocity.</p>
+                        <p>When a particle's lifetime is over, it returns to the emitter's position with new values for its variables, within the limits already set.</p>
+                        <p>To calculate the colour, the lifetime of the particle is divided by six, and depending on the time that has passed, it is given the different colours of the rainbow.</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../../img/fisicas/particle.gif" alt="Particulas" style="width:100%;">
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Scene</h2>
+                        <p>The scene generates the whole scenario, generates a physical border at the window so that the car cannot get out, and the rest of the entities that make up the floor.</p>
+                        <p>It also creates the sensor that is attached to the right of the window, which moves the platform and activates the tower, and the sensor that is in the area above, which activates the particle systems when the circles of the tower enter the triangle.Apart from this there is a sensor that is in the hole that the car has to jump over at the beginning, so that if the car falls down the scene resets.</p>
+                        <p>The scene is also responsible for detecting collisions with sensors and for calling the necessary functions in each case.</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../../img/fisicas/scene.PNG" alt="Escena" style="width:100%;">
+                </div>
+            </div>
+
+            <div class="row-5">
+                <iframe width="560" height="235" src="https://www.youtube.com/embed/c_ekB1gzovk" title="Físicas 2D en C++" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            
+            <div class="row">
+                <div class="col-sm-6">
+                    <article>
+                        <h2>Libraries</h2>
+                        <p><a href="https://www.sfml-dev.org/" target="_blank" rel="noopener noreferrer">SFML</a> to create the window and graphics</p>
+                        <p><a href="https://box2d.org/" target="_blank" rel="noopener noreferrer">Box2D</a> for the physics system</p>
+                    </article>
+                </div>
+            </div>
+
+        </section>
+        <!-- PIE -->
+        <footer>
+            <ul>
+                <li>email: <a>laurarmediavilla@gmail.com</a></li>
+                <li>itch.io: <a href="https://tortubob.itch.io/" target="_blank" rel="noopener noreferrer">Laura Rosas</a></li>
+                <li>Web created by Laura Rosas Mediavilla</li>
+            </ul>
+        </footer>
+    </div>
+    <!--jQuery first, then Popper.js, then Bootstrap JS  -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <div id="ultimo"></div>
+    
+</body>
+
+</html>

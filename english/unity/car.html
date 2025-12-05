@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Laura Rosas</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="StyleSheet" href="../../css/estilo.css" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+    <link rel="icon" href="../../img/icono.ico"/>
+</head>
+
+<body>
+    <div id="container">
+        <!-- CABECERA -->
+        <header>
+            <div class="row justify-content-center">
+                <div class="col-9 align-self-center">
+                    <h1>Portfolio</h1>
+                </div>
+            </div>
+        </header>
+        <!-- BARRA DE NAVEGACIÓN -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark"> <a class="navbar-brand" href="../index.html">Main</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"> <a class="nav-link" href="../projects.html">Projects</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="../about.html">About</a> </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- CONTENIDO CENTRAL -->
+        <section>
+            <header>
+                <h2>Racing Game</h2>
+            </header>
+            <div class="row-5">
+                <article>
+                    <h2>Technical details</h2>
+                    <p>Developed in Unity</p>
+                    <p>Single-player</p>
+                    <p>Platform: Computer</p>
+                </article>
+            </div>
+            
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Summary</h2>
+                        <p>This project consists of a prototype of a racing game where the player races against an artificial intelligence to see who completes the track first.</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../../img/car/captura.png" alt="Game" style="width:100%;">
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Car controller</h2>
+                        <p>The car controller has all the necessary functions for the physics-based movement of a car. Vehicles use Unity's "Wheel Collider" to simulate the physics of the wheels. The car controller is responsible for using the properties of these wheels to control the movement of the car. To turn the car, the front wheels rotate, to accelerate, the rear wheels rotate, and to brake, braking force is applied to all of them, and there are red lights that light up when it brakes.</p>
+                        <p>The wheels have certain characteristics that allow us to see if they are skidding or not. This allows us to add details, such as leaving a mark on the ground when skidding and also smoke being released. Each of these can be made to appear only on wheels that are skidding.</p>
+                        <p>The car controller also has a system for speed-dependent engine sound. It works with a gear system and changes the pitch of an audio depending on the gear.</p>
+                        <p>The cars have an anti-roll system that does two things, on the one hand it shifts the car's centre of gravity to one that makes it more stable, and on the other hand it checks whether the wheels on each side are touching the ground or not and applies a force to the wheels to stabilise. Even so, if the car rolls over after a few seconds it will automatically turn itself around.</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../../img/car/CarCont.png" alt="Coche" style="width:100%;">
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Circuit</h2>
+                        <p>The track has a list of objects called Waypoints that mark the course of the track. This is what the artificial intelligence uses to know which route to take.</p>
+                        <p>The track also has a series of Gateways, which are transparent cubes that the cars pass through. If a car misses one, it will be teleported to the previous one. It also serves to check when a car has completed a full lap of the track.</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../../img/car/circuit.gif" alt="Circuito" style="width:100%;">
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Player controls</h2>
+                        <p>The player's code is responsible for using the car's controller functions to move the car. To accelerate the player will have to press the "W" key, to turn left the "A" key, to turn right the "D" key, the space key for braking, and the "S" key for going backwards.</p>
+                        <p>Apart from this the "R" key can be used to reset the rotation of the car (this is the function used when the car rolls over) and then the "T" key is used to place the car on the road on the last gateway it passed.</p>
+                        
+                        <h2>Artificial intelligence</h2>
+                        <p>Artificial intelligence also uses the functions of the car controller for movement.</p>
+                        <p>The AI has an invisible object that follows the waypoints of the track, the rabbit. The car chases the rabbit and uses it to decide its movements. The AI controls the speed of the rabbit, if it moves too far away the rabbit will stop, and if it gets closer it increases its speed.</p>
+                        <p>To calculate the car's movement, the AI takes into account several things, the speed at which it is going and the curve it has to make in regard to the rabbit's position. For example, if it sees that its turn is greater than a certain angle, and that it is going too fast, it will stop accelerating or brake. With the rabbit as a reference, the AI calculates the acceleration, braking and turning force.</p>
+                        <p>If he gets stuck driving into a wall or jumps a gateway, it has a system that teleports it to the last gateway it passed through.</p>
+                        <p>The AI also has a system to avoid colliding with other cars by checking if there is a car in front of it to avoid it.</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../../img/car/control.png" alt="Coche" style="width:100%;">
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>User interface</h2>
+                        <p>In the user interface, at the top right of the screen, displays the number of laps the player has done and the number of laps remaining.</p>
+                        <p>At the bottom right, there is a speedometer, which is a circle with a needle that indicates how fast the car is going. It also has two texts, one for the speed and one for the gear. The speed is shown in kilometres per hour.</p>
+                        <p>There are two menus, firstly, the one that comes up at the end of the race, which has a victory message if the player wins or a defeat message if the AI wins. It also has two buttons, one to restart the game and one to exit. There is also a pause menu, which can be accessed by pressing "ESC". It consists of three buttons, continue, which returns you to the game, restart and exit.</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../../img/car/vel.gif" alt="Interfaz" >
+                    <img src = "../../img/car/pause.png" alt="Pause" width="50%">
+                </div>
+            </div>
+            
+            <div class="row-5">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/P_UngbBDvxs" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6">
+                <article>
+                    <h4>Credits</h4>
+                    <p>Programming: Laura Rosas Mediavilla</p>
+                    <p>UI Art: Laura Rosas Mediavilla</p>
+                    <p>Art: <a href="https://assetstore.unity.com/packages/3d/vehicles/land/arcade-free-racing-car-161085" target="_blank" rel="noopener noreferrer">Cars</a> and <a href="https://assetstore.unity.com/packages/3d/environments/roadways/race-tracks-140501" target="_blank" rel="noopener noreferrer">Circuits</a></p>
+                    <p>Text fonts: <a href="https://www.fontspace.com/cursed-timer-ulil-font-f29411" target="_blank" rel="noopener noreferrer">Speedometer</a> and <a href="https://www.fontsc.com/font/hemi-head-bd-it" target="_blank" rel="noopener noreferrer">UI</a></p>
+                </article>
+                </div>
+            </div>
+
+        </section>
+        <!-- PIE -->
+        <footer>
+            <ul>
+                <li>email: <a>laurarmediavilla@gmail.com</a></li>
+                <li>itch.io: <a href="https://tortubob.itch.io/" target="_blank" rel="noopener noreferrer">Laura Rosas</a></li>
+                <li>Web created by Laura Rosas Mediavilla</li>
+            </ul>
+        </footer>
+    </div>
+    <!--jQuery first, then Popper.js, then Bootstrap JS  -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <div id="ultimo"></div>
+    
+</body>
+
+</html>

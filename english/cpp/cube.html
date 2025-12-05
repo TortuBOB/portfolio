@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Laura Rosas</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="StyleSheet" href="../../css/estilo.css" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+    <link rel="icon" href="../../img/icono.ico"/>
+</head>
+
+<body>
+    <div id="container">
+        <!-- CABECERA -->
+        <header>
+            <div class="row justify-content-center">
+                <div class="col-9 align-self-center">
+                    <h1>Portfolio</h1>
+                </div>
+            </div>
+        </header>
+        <!-- BARRA DE NAVEGACIÓN -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark"> <a class="navbar-brand" href="../index.html">Main</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"> <a class="nav-link" href="../projects.html">Projects</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="../about.html">About</a> </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- CONTENIDO CENTRAL -->
+        <section>
+            <header>
+                <h2>Cube Engine</h2>
+            </header>
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Summary</h2>
+                        <p>This project has two parts. On the one hand, there is a static library project that has all the logic. On the other, there is a project that uses that library to assemble a 3D scenario with cubes and physics.</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../../img/cube/captura.png" alt="Captura" style="width:100%;">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Window y Scene</h2>
+                        <p>The class that creates the window uses <a href="https://bitbucket.org/angel-esne/sdl2-examples/src/master/4%20graphics%20engine/" target="_blank" rel="noopener noreferrer">this project</a> as a base and is modified to include some extra functionalities (for example, so that the project can emit sounds). In this class there are also the keyboard events, for user input.</p>
+                        <p>The scene handles the creation of all the tasks necessary for the execution of the program, for example, initialising the physics system. Apart from this it can read an XML file to create a scene.</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../../img/cube/xml.png" alt="XML" style="width:100%;">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Kernel and Task</h2>
+                        <p>The kernel is in charge of executing all the tasks, it has a list and executes them in the order in which they are listed.</p>
+                        <p>Tasks are an abstract class. There are four tasks:</p>
+                        <ul>
+                        <li>InputTask: handles events, such as closing the window or keyboard inputs, by sending messages.</li>
+                        <li>MessageDispatcher: is in charge of processing messages.</li>
+                        <li>PhysicsSystem: is in charge of the physics simulation, updates the position and rotation of non-static objects. It also checks for collisions between physical objects.</li>
+                        <li>RenderSystem: it is in charge of rendering the objects to be seen in the scene.</li>
+                        </ul>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../img/cpp/kernel.png" alt="Task" style="width:100%;">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Entity y Components</h2>
+                        <p>An entity is an object that is made up of components.</p>
+                        <p>There are many types of components, all of which inherit from an abstract class called Component.</p>
+                        <ul>
+                        <li>TransformComponent: the component representing the position, rotation and scale of the entities. All entities have this component.</li>
+                        <li>CameraComponent: this component indicates that the entity is a camera.</li>
+                        <li>LightComponent: is the component that represents light</li>
+                        <li>RenderableComponent: is the component displayed on the screen, the 3D model (a cube).</li>
+                        <li>PhysicsComponent: this is the physics component, with a cubic rigidbody. It has an id that is used to detect any collisions in order to perform an action.</li>
+                        <li>PlayerComponent: this class allows the user to move a cube with the "WASD" keys, using the physics system.</li>
+                        </ul>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../../img/cube/comp.png" alt="Components" style="width:100%;">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Messaging system</h2>
+                        <p>The messaging system has three main classes:</p>
+                        <ul>
+                        <li>Message: a message is composed of its target, to whom it is aimed, and its action, as a target can perform several actions. For example, it is used to determine the direction in which the force should be applied in the player movement.</li>
+                        <li>MessageObserver: is an abstract class that receives a message. Classes that inherit from it override a function that receives the message to do different actions.</li>
+                        <li>MessageDispatcher: this class is the task in charge of receiving messages and sending them to the different observers.</li>
+                        </ul>
+                        <p>There are several classes that inherit from the MessageObserver:</p>
+                        <ul>
+                        <li>CloseMessage: is responsible for closing the window.</li>
+                        <li>SoundMessage: it is in charge of producing a sound when the physics system detects an impact between the player and a wall.</li>
+                        <li>PlayerComponent: this component of the entity receives messages from the InputTask to know which keys have been pressed.</li>
+                        </ul>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../img/cpp/mensaje.png" alt="Mensajes" style="width:100%;">
+                </div>
+                
+            </div>
+
+            <div class="row-5">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/LVqOZmYeu_Q" title="Cube Engine" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            
+            <div class="row-5">
+                <article>
+                    <h3>Project here:</h3>
+                    <a href="https://github.com/TortuBOB/CubeEngine" target="_blank" rel="noopener noreferrer"><img class= "hover" src="../../img/GitHub.png" alt="LogoGitHub" width="300"></a>
+                </article>
+            </div>
+            
+            <div class="row">
+                <div class="col-sm-6">
+                    <article>
+                        <h2>Libraries</h2>
+                        <p><a href="https://www.libsdl.org/ " target="_blank" rel="noopener noreferrer">SDL2</a> to create the window</p>
+                        <p><a href="https://github.com/libsdl-org/SDL_mixer/releases" target="_blank" rel="noopener noreferrer">SDL2-Mixer</a> for sounds</p>
+                        <p><a href="https://github.com/bulletphysics/bullet3" target="_blank" rel="noopener noreferrer">Bullet Physics</a> for the physics system</p>
+                        <p><a href="https://bitbucket.org/angel-esne/opengl-toolkit/src/master/" target="_blank" rel="noopener noreferrer">OpenGl-Toolkit</a> for the render system</p>
+                        <p><a href="https://rapidxml.sourceforge.net/" target="_blank" rel="noopener noreferrer">RapidXML</a> to read XML files</p>
+                    </article>
+                </div>
+            </div>
+
+        </section>
+        <!-- PIE -->
+        <footer>
+            <ul>
+                <li>email: <a>laurarmediavilla@gmail.com</a></li>
+                <li>itch.io: <a href="https://tortubob.itch.io/" target="_blank" rel="noopener noreferrer">Laura Rosas</a></li>
+                <li>Web created by Laura Rosas Mediavilla</li>
+            </ul>
+        </footer>
+    </div>
+    <!--jQuery first, then Popper.js, then Bootstrap JS  -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <div id="ultimo"></div>
+    
+</body>
+
+</html>

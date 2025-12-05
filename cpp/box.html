@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Laura Rosas</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="StyleSheet" href="../css/estilo.css" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+    <link rel="icon" href="../img/icono.ico"/>
+</head>
+
+<body>
+    <div id="container">
+        <!-- CABECERA -->
+        <header>
+            <div class="row justify-content-center">
+                <div class="col-9 align-self-center">
+                    <h1>Portfolio</h1>
+                </div>
+            </div>
+        </header>
+        <!-- BARRA DE NAVEGACIÓN -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark"> <a class="navbar-brand" href="../index.html">Main</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"> <a class="nav-link" href="../projects.html">Proyectos</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="../about.html">About</a> </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- CONTENIDO CENTRAL -->
+        <section>
+            <header>
+                <h2>2D Physics</h2>
+            </header>
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Resumen</h2>
+                        <p>Este proyecto es el primero realizado con C++ en Visual Studio. Consiste en una simulación de físicas en 2D usando la biblioteca de físicas Box2D.</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../img/fisicas/2captura.png" alt="Captura" style="width:100%;">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Entidades y Motores</h2>
+                        <p>Una entidad puede ser un objeto formado por un cuerpo rígido y una figura geométrica. Hay dos entidades que son así: las entidades circulares y las rectangulares. Además, está la entidad sensor, que es un cuadrado sin parte visible y que detecta colisiones cuando lo atraviesa otro cuerpo. </p>
+                        <p>El cuerpo rígido, puede ser dinámico, que simula las físicas (gravedad, se mueve al chocar contra algo…), estático, que no se puede mover, y cinemático (kinematic), que no simula las físicas, pero se puede mover.</p>
+                        <p>Por último, están las entidades que crean otro tipo de polígonos. Por un lado, está la entidad cadena, que genera la parte física de un polígono a partir de sus vértices. Por otro esta la entidad poligonal, que es la parte visible que se genera de la misma manera, con vértices.
+                        <p>Los motores unen dos entidades juntas y si se activa, estas entidades girarán sobre un punto. Se puede establecer la velocidad a la que se mueve y un ángulo límite de movimiento. 
+                        </p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../img/fisicas/entity.gif" alt="Entidad" style="width:100%;">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Coche</h2>
+                        <p>El coche está formado por varias entidades y motores. Su cuerpo es un rectángulo al que se unen con motores las dos ruedas y un volquete, formado por un círculo y tres rectángulos. Todas las entidades del coche son dinámicas.</p>
+                        <p>Hay motores que solo sirven para mantener los objetos unidos y otros que sirven para el movimiento y el uso del volquete. Las ruedas giran sobre sí mismas usando el motor que las une al cuerpo, el movimiento se produce por el rozamiento con el suelo.</p>
+                        <P>El volquete se mueve gracias a tres motores, los que unen cada rectángulo que lo forma con el cuerpo, y usa de punto de giro la posición del círculo que esta entre el volquete y el cuerpo. Esto se hace así porque el movimiento quedaba mejor que haciendo que el círculo gire. El resto de motores solo se usan para unir las partes restantes del coche.</P>
+                        <P>El coche se mueve con las teclas “A” y “D” a la izquierda y a la derecha, con la tecla “S” se frena. La tecla espacio es para activar el volquete, si esta bajado subirá, y de lo contrario volverá a la posición inicial.</P>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../img/fisicas/2car.gif" alt="Coche" style="width:100%;">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Plataforma y Torre</h2>
+                        <p>La plataforma está formada por dos rectángulos cinemáticos y un sensor. La plataforma al inicio está fuera de la parte visible, y aparece cuando el coche toca un sensor que está pegado al borde derecho de la ventana. Una vez el coche se pone encima se activa el sensor de la plataforma que hace que suba hasta la zona superior.</p>
+                        <p>La torre está formada por tres rectángulos y un círculo. Dos de los rectángulos son dinámicos, el círculo y uno de los rectángulos son estáticos, y el rectángulo no tiene colisiones, se puede atravesar. También tiene 10 círculos dinámicos. La torre se activa y deja caer los círculos dinámicos cuando el coche toca el sensor del borde derecho de la ventana, dejándolos caer sobre el coche.</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../img/fisicas/tower.gif" alt="Torre" style="width:100%;">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Partículas</h2>
+                        <p>El sistema de partículas esta formado un emisor, que es el punto del que salen las partículas, y un número de partículas, entre las que hay una lista de ellas activas y otras inactivas. Las partículas son círculos que tienen un tamaño, tiempo de vida, velocidad y color.</p>
+                        <p>Al inicio todas las partículas están inactivas y se van activando cada cierto tiempo hasta que están todas activas, para que no aparezcan todas de golpe.</p>
+                        <p>El sistema de partículas tiene un tamaño máximo y uno mínimo, así las partículas son de distintos tamaños, entre estos valores. Lo mismo se cumple para el tiempo de vida y velocidad. </p>
+                        <p>Cuando el tiempo de vida de una partícula se acaba vuelve a la posición del emisor con valores nuevos en sus variables, entre los límites ya establecidos.</p>
+                        <p>Para calcular el color lo que se hace es dividir el tiempo de vida de la partícula entre seis, y dependiendo del tiempo que haya pasado se pone de los distintos colores del arcoíris.</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../img/fisicas/particle.gif" alt="Particulas" style="width:100%;">
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Escena</h2>
+                        <p>La escena genera todo el escenario, genera un borde físico en la ventana para que el coche no pueda salirse, y el resto de entidades que forman el suelo. </p>
+                        <p>También genera el sensor que está pegado a la derecha de la ventana, que mueve la plataforma y activa la torre, el sensor que está en la zona de arriba, que activa los sistemas de partículas cuando los círculos de la torre entran en el triángulo. Aparte de esto hay un sensor que está en el agujero que tiene que saltar el coche al principio, para que si cae el coche se reestablezca la escena.</p>
+                        <p>La escena también se encarga de detectar las colisiones con los sensores y que se llame a las funciones necesarias en cada caso.</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../img/fisicas/scene.PNG" alt="Escena" style="width:100%;">
+                </div>
+            </div>
+
+            <div class="row-5">
+                <iframe width="560" height="235" src="https://www.youtube.com/embed/c_ekB1gzovk" title="Físicas 2D en C++" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            
+            <div class="row">
+                <div class="col-sm-6">
+                    <article>
+                        <h2>Bibliotecas</h2>
+                        <p><a href="https://www.sfml-dev.org/" target="_blank" rel="noopener noreferrer">SFML</a> para crear la ventana y los gráficos</p>
+                        <p><a href="https://box2d.org/" target="_blank" rel="noopener noreferrer">Box2D</a> para las físicas</p>
+                    </article>
+                </div>
+            </div>
+
+        </section>
+        <!-- PIE -->
+        <footer>
+            <ul>
+                <li>email: <a>laurarmediavilla@gmail.com</a></li>
+                <li>itch.io: <a href="https://tortubob.itch.io/" target="_blank" rel="noopener noreferrer">Laura Rosas</a></li>
+                <li>Web creada por Laura Rosas Mediavilla</li>
+            </ul>
+        </footer>
+    </div>
+    <!--jQuery first, then Popper.js, then Bootstrap JS  -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <div id="ultimo"></div>
+    
+</body>
+
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Laura Rosas</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="StyleSheet" href="../css/estilo.css" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+    <link rel="icon" href="../img/icono.ico"/>
+</head>
+
+<body>
+    <div id="container">
+        <!-- CABECERA -->
+        <header>
+            <div class="row justify-content-center">
+                <div class="col-9 align-self-center">
+                    <h1>Portfolio</h1>
+                </div>
+            </div>
+        </header>
+        <!-- BARRA DE NAVEGACIÓN -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark"> <a class="navbar-brand" href="../index.html">Main</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"> <a class="nav-link" href="../projects.html">Proyectos</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="../about.html">About</a> </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- CONTENIDO CENTRAL -->
+        <section>
+            <header>
+                <h2>Racing Game</h2>
+            </header>
+            <div class="row-5">
+                <article>
+                    <h2>Detalles Técnicos</h2>
+                    <p>Desarrollado en Unity</p>
+                    <p>Un jugador</p>
+                    <p>Plataforma: Ordenador</p>
+                </article>
+            </div>
+            
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Resumen</h2>
+                        <p>Este proyecto consiste en un prototipo de un juego de carreras donde el jugador compite con una inteligencia artificial para ver quien completa el circuito primero.</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../img/car/captura.png" alt="Game" style="width:100%;">
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Controlador para vehículos</h2>
+                        <p>El controlador del vehículo tiene todas las funciones necesarias para el movimiento de un coche por físicas. Los vehículos utilizan el “Wheel Collider” de Unity para simular las físicas de las ruedas. El controlador del coche se encarga de usar las propiedades de estas ruedas para controlar el movimiento del coche. Para girar el coche se giran las ruedas delanteras, para acelerar se aplica fuerza de giro a las de atrás, y para frenar se aplica fuerza de freno en todas, y además tiene unas luces rojas que se encienden para mostrar el freno.</p>
+                        <p>Las ruedas tienen ciertas características que nos permiten mirar si están derrapando o no. Esto nos permite añadir detalles, como que deje una marca en el suelo al derrapar y también que salga humo. Se puede hacer que cada una de estas cosas solo aparezca en las ruedas que estén derrapando gracias a este componente.</p>
+                        <p>El controlador del vehículo también cuenta con un sistema para el sonido del motor dependiendo de la velocidad. Funciona con un sistema de marchas (como en un coche normal) y cambia el pitch de un audio dependiendo de la marcha.</p>
+                        <p>Los coches tienen un sistema antivuelco que hace dos cosas, por un lado, cambia el centro de gravedad del coche a uno que lo hace más estable, y por otro lado comprueba si las ruedas de cada lado están tocando el suelo o no y aplica una fuerza a las ruedas para estabilizar. Aun así, si el coche vuelca tras unos segundos se dará la vuelta automáticamente.  </p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../img/car/CarCont.png" alt="Coche" style="width:100%;">
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Circuito</h2>
+                        <p>El circuito cuenta con una lista de objetos llamados Waypoints que marcan el recorrido del circuito. Esto es lo que usa la inteligencia artificial para saber el recorrido que tiene que hacer.</p>
+                        <p>El circuito también cuenta con una serie de gateways, que son unos cubos transparentes que atraviesan los coches. Si un coche se salta uno será teletransportado al anterior. Además, sirve para controlar cuando un coche ha dado una vuelta completa al circuito.</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../img/car/circuit.gif" alt="Circuito" style="width:100%;">
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Controles del jugador</h2>
+                        <p>El código del jugador se encarga de usar las funciones del controlador del coche para el movimiento. Para acelerar el jugador tendrá que pulsar la tecla “W”, para girar a la izquierda la “A”, para la derecha la “D”, la tecla del espacio para frenar, y la tecla “S” para la marcha atrás. </p>
+                        <p>Aparte de esto puede usar la tecla “R” para reiniciar la rotación del coche (es la función que usa cuando vuelca el coche) y luego con la tecla “T” coloca el coche en la carretera en el último gateway que haya pasado.</p>
+                        <h2>Inteligencia artificial</h2>
+                        <p>La inteligencia artificial también usa las funciones del controlador de coches para el movimiento.</p>
+                        <p>La IA tiene por un lado un objeto invisible que sigue los waypoints del circuito, el conejo. El coche persigue al conejo y lo usa para decidir sus movimientos. La IA controla la velocidad del conejo, si se alejan mucho el conejo se parará, y si se acerca aumenta la velocidad.</p>
+                        <p>Para calcular el movimiento del coche la IA tiene en cuenta varias cosas, la velocidad a la que va y la curva que tiene que hacer con respecto a la posición del conejo. Por ejemplo, si ve que su giro es mayor que cierto ángulo, y que va a demasiada velocidad, dejará de acelerar o frenará. Teniendo al conejo como referencia, la IA calcula la fuerza de aceleración, de freno y el giro.</p>
+                        <p>Si se queda atascado conduciendo contra una pared o se salta un gateway tiene un sistema que lo teletransporta al último gateway por el que ha pasado.</p>
+                        <p>La IA también cuenta con un sistema para evitar chocarse con otros coches, comprobando si hay algún coche justo delante para esquivarlo.</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../img/car/control.png" alt="Coche" style="width:100%;">
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Interfaz de usuario</h2>
+                        <p>En la interfaz de usuario, en la parte superior derecha de la pantalla, se muestra el número de vueltas que lleva el jugador y las vueltas que hay que hacer.</p>
+                        <p>En la parte inferior derecha, hay un velocímetro, que es un circulo con una aguja que indica la velocidad a la que va el coche. Además, tiene dos textos, uno para la velocidad y otro para la marcha. La velocidad se muestra en kilómetros por hora.</p>
+                        <p>Hay dos menús, por un lado, está el que sale al finalizar la carrera, que tiene un mensaje de victoria si gana el jugador o uno de derrota si gana la IA. También tiene dos botones, uno para reiniciar la partida y otro para salir. Por otro lado, está el menú de pausa, al que se puede acceder pulsando “ESC”. Está formado por tres botones, continuar, que te devuelve al juego, reiniciar y salir.</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../img/car/vel.gif" alt="Interfaz" >
+                    <img src = "../img/car/pause.png" alt="Pause" width="50%">
+                </div>
+            </div>
+            
+            <div class="row-5">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/P_UngbBDvxs" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6">
+                <article>
+                    <h4>Créditos</h4>
+                    <p>Programación: Laura Rosas Mediavilla</p>
+                    <p>Arte UI: Laura Rosas Mediavilla</p>
+                    <p>Arte: <a href="https://assetstore.unity.com/packages/3d/vehicles/land/arcade-free-racing-car-161085" target="_blank" rel="noopener noreferrer">Coches</a> y <a href="https://assetstore.unity.com/packages/3d/environments/roadways/race-tracks-140501" target="_blank" rel="noopener noreferrer">Circuitos</a></p>
+                    <p>Fuentes de texto: <a href="https://www.fontspace.com/cursed-timer-ulil-font-f29411" target="_blank" rel="noopener noreferrer">Velocímetro</a> y <a href="https://www.fontsc.com/font/hemi-head-bd-it" target="_blank" rel="noopener noreferrer">UI</a></p>
+                </article>
+                </div>
+            </div>
+
+        </section>
+        <!-- PIE -->
+        <footer>
+            <ul>
+                <li>email: <a>laurarmediavilla@gmail.com</a></li>
+                <li>itch.io: <a href="https://tortubob.itch.io/" target="_blank" rel="noopener noreferrer">Laura Rosas</a></li>
+                <li>Web creada por Laura Rosas Mediavilla</li>
+            </ul>
+        </footer>
+    </div>
+    <!--jQuery first, then Popper.js, then Bootstrap JS  -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <div id="ultimo"></div>
+    
+</body>
+
+</html>

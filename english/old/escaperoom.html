@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Laura Rosas</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="StyleSheet" href="../../css/estilo.css" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+    <link rel="icon" href="../../img/icono.ico"/>
+</head>
+
+<body>
+    <div id="container">
+        <!-- CABECERA -->
+        <header>
+            <div class="row justify-content-center">
+                <div class="col-9 align-self-center">
+                    <h1>Portfolio</h1>
+                </div>
+            </div>
+        </header>
+        <!-- BARRA DE NAVEGACIÓN -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark"> <a class="navbar-brand" href="../index.html">Main</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"> <a class="nav-link" href="../projects.html">Projects</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="../about.html">About</a> </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- CONTENIDO CENTRAL -->
+        <section>
+            <header>
+                <h2>Escape Room</h2>
+            </header>
+            <div class="row-5">
+                <article>
+                    <h2>Technical details</h2>
+                    <p>Developed in Unreal</p>
+                    <p>Single-player</p>
+                    <p>Genre: Puzzle</p>
+                    <p>Platform: Computer</p>
+                </article>
+            </div>
+            
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Summary</h2>
+                        <p>This game consists of escaping from a room with an object. The problem is that as soon as you take the object, the door of the room closes. You will have to find objects that have a similar weight and place them where the other object was so that the door opens again.</p>
+                        <p>As soon as you remove the object from where it is, two doors close. In the room where you are there is an object that you can take and it can open the door to the kitchen (it is not enough weight to open the exit). In the kitchen you will find an object, which added to the one already placed, will be enough to open the exit.</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../../img/EscapeRoom/puertas.png" alt="Puertas" style="width:90%;">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Mechanics</h2>
+                        <p>This project was programmed in C++ (without using Unreal's blueprints system).</p>
+                        <p>The player can move around the map and pick up and drop certain objects. The movement is with the "WASD" keys. To pick up an object you have to be looking at it, right click and hold it down. If you release it, you will drop the object.</p>
+                        <p>There is also the pressure plate system. On the table where the lantern is, there is a trigger that detects the weight that is in the table. The two doors are connected to this pressure plate, and only open if there is more than a certain weight on the plate. The door leading to the kitchen opens with less weight than the other one, so when you put the book on the pressure plate only the kitchen door opens. The lantern is the heaviest object, so you need the other two objects to escape.</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../../img/EscapeRoom/placa.png" alt="Placa de presión" style="width:90%;">
+                </div>
+            </div>
+            
+            <div class="row-5">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ERykOtYV4Ls" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                <article>
+                    <h4>Credits</h4>
+                    <p>Programming: Laura Rosas Mediavilla</p>
+                    <p>Art: <a href="https://www.unrealengine.com/marketplace/en-US/store" target="_blank" rel="noopener noreferrer"> Unreal Engine Marketplace </a> </p>
+                    <p>Music: <a href="https://freesound.org/people/shortiefoeva2/sounds/411080/" target="_blank" rel="noopener noreferrer">freesound</a> </p>
+                </article>
+                </div>
+            </div>
+
+        </section>
+        <!-- PIE -->
+        <footer>
+            <ul>
+                <li>email: <a>laurarmediavilla@gmail.com</a></li>
+                <li>itch.io: <a href="https://tortubob.itch.io/" target="_blank" rel="noopener noreferrer">Laura Rosas</a></li>
+                <li>Web created by Laura Rosas Mediavilla</li>
+            </ul>
+        </footer>
+    </div>
+    <!--jQuery first, then Popper.js, then Bootstrap JS  -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <div id="ultimo"></div>
+    
+</body>
+
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Laura Rosas</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="StyleSheet" href="../css/estilo.css" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+    <link rel="icon" href="../img/icono.ico"/>
+</head>
+
+<body>
+    <div id="container">
+        <!-- CABECERA -->
+        <header>
+            <div class="row justify-content-center">
+                <div class="col-9 align-self-center">
+                    <h1>Portfolio</h1>
+                </div>
+            </div>
+        </header>
+        <!-- BARRA DE NAVEGACIÓN -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark"> <a class="navbar-brand" href="../index.html">Main</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"> <a class="nav-link" href="../projects.html">Proyectos</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="../about.html">About</a> </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- CONTENIDO CENTRAL -->
+        <section>
+            <header>
+                <h2>NPC Farming</h2>
+            </header>
+            <div class="row-5">
+                <article>
+                    <h2>Detalles Técnicos</h2>
+                    <p>Desarrollado en Unreal con blueprints</p>
+                    <p>Plataforma: Ordenador</p>
+                </article>
+            </div>
+            
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Resumen</h2>
+                        <p>Este proyecto consiste en una simulación en la que hay varios NPCs que tienen que recoger ciertos recursos y llevarlos a los almacenes correspondientes. Los recursos se van generando en una zona de forma aleatoria.
+                        </p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../img/Farm/captura.png" alt="Game" style="width:100%;">
+                </div>
+            </div>
+            
+
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Recursos</h2>
+                        <p>Hay tres tipos de recursos: verde, naranja y azul. 
+                        </p>
+                        <p>Hay una zona de creación de recursos, un cubo invisible, donde se generan en posiciones aleatorias dentro de este los recursos.
+                        </p>
+                        <p>Cada recurso tiene un porcentaje de aparición distinto, siendo los verdes los que aparecen con más frecuencia y los naranjas los que menos.</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../img/Farm/recursos.PNG" alt="Recursos" style="width:100%;">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Almacenes</h2>
+                        <p>Los recursos son llevados a almacenes por los NPCs. Cada almacén acepta distintos tipos de recursos, unos solo aceptan un tipo, otros dos y otros los tres. </p>
+                        <p>También tienen un límite de recursos que puede almacenar y estos se distribuyen uniformemente dependiendo del número que acepte. Si un almacén se llena no acepta más recursos.</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../img/Farm/almacen.png" alt="Almacenes" style="width:100%;">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>NPCs</h2>
+                        <p>Cada NPC puede recoger un tipo de recurso únicamente, que se muestra por el color del personaje. 
+                        </p>
+                        <p>Los NPCs usan el sistema EQS de Unreal Engine para tomar las decisiones. 
+                        </p>
+                        <p>El comportamiento de los NPC consiste en buscar el recurso más cercano del tipo correcto, ir a por él, recogerlo y llevarlo al almacén más cercano que acepte ese tipo de recursos.</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../img/Farm/tree.png" alt="Tree" style="width:100%;">
+                </div>
+            </div>
+            <div class="row-5">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/kp_iVDAyDkI" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            
+            <div class="row-5">
+                <article>
+                    <h3><a href="../pdf/Farm.pdf" target="_blank" rel="noopener noreferrer">Más informacion</a></h3>
+                </article>
+            </div>
+
+        </section>
+        <!-- PIE -->
+        <footer>
+            <ul>
+                <li>email: <a>laurarmediavilla@gmail.com</a></li>
+                <li>itch.io: <a href="https://tortubob.itch.io/" target="_blank" rel="noopener noreferrer">Laura Rosas</a></li>
+                <li>Web creada por Laura Rosas Mediavilla</li>
+            </ul>
+        </footer>
+    </div>
+    <!--jQuery first, then Popper.js, then Bootstrap JS  -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <div id="ultimo"></div>
+    
+</body>
+
+</html>

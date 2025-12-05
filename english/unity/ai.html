@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Laura Rosas</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="StyleSheet" href="../../css/estilo.css" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+    <link rel="icon" href="../../img/icono.ico"/>
+</head>
+
+<body>
+    <div id="container">
+        <!-- CABECERA -->
+        <header>
+            <div class="row justify-content-center">
+                <div class="col-9 align-self-center">
+                    <h1>Portfolio</h1>
+                </div>
+            </div>
+        </header>
+        <!-- BARRA DE NAVEGACIÓN -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark"> <a class="navbar-brand" href="../index.html">Main</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"> <a class="nav-link" href="../projects.html">Projects</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="../about.html">About</a> </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- CONTENIDO CENTRAL -->
+        <section>
+            <header>
+                <h2>AI Project</h2>
+            </header>
+            <div class="row-5">
+                <article>
+                    <h2>Technical details</h2>
+                    <p>Developed in Unity</p>
+                    <p>Single-player</p>
+                    <p>Platform: Computer</p>
+                </article>
+            </div>
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Summary</h2>
+                        <p>This project consists of a game in which the map is procedurally generated. The map is divided into biomes, each one with its unique characteristics; different textures for the ground, unique assets for each biome and each one also has a different type of item. The player can pick up these items and if they pick up all the items on the map they win, and can create a new world and repeat the process.
+                        </p>
+                        <p>Apart from this, the world is inhabited by different animals, each with its own behaviors, which reproduce and the offspring have different characteristics, causing them to change.
+                        </p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../../img/IAGame.png" alt="Image 1" style="width:100%;">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Player</h2>
+                        <p>It is a first person game. To look around you have to use the mouse, to move you have to use the typical "WASD" control, although the arrow keys also work. You can jump with the space key.
+                        </p>
+                        <p>You can also open the pause menu by pressing ESC.</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../../img/IA/Controles.PNG" alt="Controles" style="width:80%;">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>World Generator</h2>
+                        <p>The world generator works with a tile system. Each tile has a biome associated with it, and the biomes store a texture for the ground, a series of assets and animals that can appear in them.</p>
+                        <p>Assets have a chance to be created. If an asset is not created on certain tiles, then an animal can be generated. First the world assets are created and then where there is space, the animals are added.</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../../img/IA/Map.png" alt="Map" style="width:100%;">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Animals</h2>
+                        <p>Animals use state machines to make decisions about what they do. Each animal has its own unique behaviour.
+                        </p>
+                        <h4>Turtles</h4>
+                        <p>The turtle only interacts with the player and other turtles. If you approach it, it will hide in its shell. If it can have a child and sees a turtle nearby, it will go towards it to have a child. If it runs out of energy from wandering it will rest.
+                        </p>
+                        <h4>Foxes</h4>
+                        <p>The fox basically wanders around until it sees a chicken, which will then try to hunt down. If it can have a child it will also try to get close to another fox to have a baby. If it runs out of energy it will rest.
+                        </p>
+                        <h4>Chickens</h4>
+                        <p>Chickens run away from foxes that will try to catch them. If there are no foxes they will simply wander as long as they have energy. If they run out of energy they will rest. If they see other chickens and can have a child, they will have one.
+                        </p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../img/unity/Tortuga.png" alt="Tortuga" style="width:100%;">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <img src="../img/unity/Cazador.png" alt="Cazador" style="width:100%;">
+                </div>
+                <div class="col-sm-6">
+                    <img src="../img/unity/Presa.png" alt="Presa" style="width:100%;">
+                </div>
+                
+            </div>
+
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Generational change</h2>
+                        <p>Animals can have offspring under certain circumstances. Animals store information from both parents, and then inherit certain characteristics from each parent. There are also random mutations.</p>
+                        <p>The features that can change are: the material of the model, its speed, vision, energy and size. The chick works a little differently because the material it holds is not shown until it grows up (all chicks are yellow).</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../../img/IA/Child.PNG" alt="Cambio" style="width:70%;">
+                </div>
+            </div>
+
+            <div class="row-5">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/EMOGtbzZ5NQ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="row-5">
+                <article>
+                    <h3>Unity project here:</h3>
+                    <a href="https://github.com/TortuBOB/WorldGenerator" target="_blank" rel="noopener noreferrer"><img class= "hover" src="../../img/GitHub.png" alt="LogoGitHub" width="300"></a>
+                </article>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                <article>
+                    <h4>Credits</h4>
+                    <p>Programming: Laura Rosas Mediavilla</p>
+                    <p>Art: <a href="https://assetstore.unity.com" target="_blank" rel="noopener noreferrer">Unity Asset Store</a></p>
+                </article>
+                </div>
+            </div>
+
+        </section>
+        <!-- PIE -->
+        <footer>
+            <ul>
+                <li>email: <a>laurarmediavilla@gmail.com</a></li>
+                <li>itch.io: <a href="https://tortubob.itch.io/" target="_blank" rel="noopener noreferrer">Laura Rosas</a></li>
+                <li>Web created by Laura Rosas Mediavilla</li>
+            </ul>
+        </footer>
+    </div>
+    <!--jQuery first, then Popper.js, then Bootstrap JS  -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <div id="ultimo"></div>
+    
+</body>
+
+</html>

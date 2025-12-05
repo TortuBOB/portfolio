@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Laura Rosas</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="StyleSheet" href="../css/estilo.css" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+    <link rel="icon" href="../img/icono.ico"/>
+</head>
+
+<body>
+    <div id="container">
+        <!-- CABECERA -->
+        <header>
+            <div class="row justify-content-center">
+                <div class="col-9 align-self-center">
+                    <h1>Portfolio</h1>
+                </div>
+            </div>
+        </header>
+        <!-- BARRA DE NAVEGACIÓN -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark"> <a class="navbar-brand" href="../index.html">Main</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"> <a class="nav-link" href="../projects.html">Proyectos</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="../about.html">About</a> </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- CONTENIDO CENTRAL -->
+        <section>
+            <header>
+                <h2>Escape Room</h2>
+            </header>
+            <div class="row-5">
+                <article>
+                    <h2>Detalles Técnicos</h2>
+                    <p>Desarrollado en Unreal</p>
+                    <p>Un jugador</p>
+                    <p>Género: Puzzle</p>
+                    <p>Plataforma: Ordenador</p>
+                </article>
+            </div>
+            
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Resumen</h2>
+                        <p>Este juego consiste en escapar de una habitación con un objeto. El problema es que en cuanto coges el objeto, la puerta de la habitación se cierra. Tendrás que encontrar objetos que tengan un peso similar y colocarlos donde estaba el otro objeto para que la puerta vuelva a abrirse.</p>
+                        <p>En cuanto quitas el objeto de donde está, dos puertas se cierran. En la habitación en la que estas hay un objeto que puedes coger y eso hará que se abra la puerta a la cocina (no es suficiente peso para abrir la salida). En la cocina encontrarás un objeto, que sumado al que ya fue colocado, será suficiente para abrir la salida.</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../img/EscapeRoom/puertas.png" alt="Puertas" style="width:90%;">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Mecánicas</h2>
+                        <p>Este proyecto fue programado en C++ (sin usar el sistema de blueprints de Unreal).</p>
+                        <p>El jugador puede moverse por el mapa y coger y soltar ciertos objetos del mapa. El movimiento es con las teclas “WASD”. Para coger un objeto tienes que estar mirándolo, pulsar click derecho y mantenerlo pulsado. Si lo dejas de apretar soltarás el objeto.</p>
+                        <p>Luego está el sistema de la placa de presión. En el mueble donde está el farolillo tiene un trigger que detecta el peso que hay dentro de él. Las puertas dos puertas que hay están conectadas a esta placa de presión, y solo se abren si hay más de cierto peso en la placa. La puerta que da a la cocina se abre con menos peso que la otra, por eso cuando pones el libro en la placa de presión solo se abre la puerta de la cocina. El farolillo es el objeto que más pesa, por eso necesitas los otros dos objetos para poder escapar.</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../img/EscapeRoom/placa.png" alt="Placa de presión" style="width:90%;">
+                </div>
+            </div>
+            
+            <div class="row-5">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ERykOtYV4Ls" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                <article>
+                    <h4>Créditos</h4>
+                    <p>Programación: Laura Rosas Mediavilla</p>
+                    <p>Arte: <a href="https://www.unrealengine.com/marketplace/en-US/store" target="_blank" rel="noopener noreferrer"> Unreal Engine Marketplace </a> </p>
+                    <p>Música: <a href="https://freesound.org/people/shortiefoeva2/sounds/411080/" target="_blank" rel="noopener noreferrer">freesound</a> </p>
+                </article>
+                </div>
+            </div>
+
+        </section>
+        <!-- PIE -->
+        <footer>
+            <ul>
+                <li>email: <a>laurarmediavilla@gmail.com</a></li>
+                <li>itch.io: <a href="https://tortubob.itch.io/" target="_blank" rel="noopener noreferrer">Laura Rosas</a></li>
+                <li>Web creada por Laura Rosas Mediavilla</li>
+            </ul>
+        </footer>
+    </div>
+    <!--jQuery first, then Popper.js, then Bootstrap JS  -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <div id="ultimo"></div>
+    
+</body>
+
+</html>

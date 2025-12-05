@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Laura Rosas</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="StyleSheet" href="../css/estilo.css" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+    <link rel="icon" href="../img/icono.ico"/>
+</head>
+
+<body>
+    <div id="container">
+        <!-- CABECERA -->
+        <header>
+            <div class="row justify-content-center">
+                <div class="col-9 align-self-center">
+                    <h1>Portfolio</h1>
+                </div>
+            </div>
+        </header>
+        <!-- BARRA DE NAVEGACIÓN -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark"> <a class="navbar-brand" href="../index.html">Main</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"> <a class="nav-link" href="../projects.html">Proyectos</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="../about.html">About</a> </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- CONTENIDO CENTRAL -->
+        <section>
+            <header>
+                <h2>Shooter Multijugador</h2>
+            </header>
+            <div class="row-5">
+                <article>
+                    <h2>Detalles Técnicos</h2>
+                    <p>Desarrollado en Unreal con blueprints</p>
+                    <p>Multijugador</p>
+                    <p>Plataforma: Ordenador</p>
+                </article>
+
+            </div>
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Resumen</h2>
+                        <p>Este proyecto consiste en un juego multijugador de tipo First Person Shooter (videojuego de disparos en primera persona) desarrollado en Unreal Engine con el sistema de blueprints.
+                        </p>
+                        <p>El juego usa de base el proyecto First Person Shooter (FPS) que viene con Unreal. Este cuenta con las mecánicas básicas de un FPS, el movimiento, la cámara y los disparos. A esta base se le añaden otras mecánicas.
+                        </p>
+
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../img/Shooter/juego.png" alt="Juego" style="width:100%;">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Sistema de salud</h2>
+                        <p>El jugador tiene una barra de vida que baja si otro jugador le dispara. Si el jugador se queda sin vida morirá, apareciendo una pantalla de muerte y una cuenta atrás de 10 segundos. Una vez pasan los segundos, la pantalla de muerte desaparece y vuelve a tener la vida al máximo.
+                        </p>
+                        <p>Si la vida de un jugador cae por debajo del 30%, el jugador puede pulsar el botón central del ratón para usar una poción. Esto le dará 70 puntos de salud, pero tiene un tiempo de reutilización de 60 segundos.
+                        </p>
+
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../img/Shooter/muerte.png" alt="Salud" style="width:100%;">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Energía y tipos de armas</h2>
+                        <p>El jugador dispone de un sistema de energía que es necesaria para realizar ciertas acciones. Si no tiene la suficiente energía no podrá realizar las acciones. </p>
+                        <p>El jugador recupera diez puntos de energía por segundo y tiene un máximo de 100 puntos de energía. </p>
+                        <p>Hay unos expositores en el juego donde se puede cambiar el tipo de arma, aunque solo cambia el color de esta.</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../img/Shooter/armas.png" alt="Energia" style="width:100%;">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Tipos de disparos</h2>
+                        <p>Hay dos tipos de disparos:</p>
+                        <p>Disparo normal (click izquierdo): es el que se usa para atacar a otros jugadores. Consume 10 puntos de energía. Este tipo de disparo tiene balas limitadas y cargadores. Al inicio de la partida el jugador tiene 10 balas y un cargador.</p>
+                        <p>Cuando las balas activas se acaben aparecerá por pantalla un mensaje con la tecla que hay que pulsar para recargar (solo si tiene cargadores). Al recargar se gasta un cargador y tendrá 10 balas de nuevo. El máximo de cargadores que se puede tener son 4. Para conseguir cargadores, el jugador tendrá que acertar dos disparos consecutivos al otro jugador.</p>
+                        <p>Disparo en área (click derecho): se utiliza para destruir coberturas. Consume 70 puntos de energía y tiene un tiempo de reutilización de 30 segundos.</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../img/Shooter/recarga.png" alt="Disparos" style="width:100%;">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Tipo de daño</h2>
+                        <p>El juego cuenta con tres tipos de daño: hielo, fuego y físico.  Para seleccionar el tipo de daño habrá que pulsar los botones 1 (daño físico), 2 (daño de fuego) y 3 (daño de hielo). Para mostrar el cambio hay unos iconos en la UI que cambian su opacidad dependiendo del tipo de daño.</p>
+                        <p>Si un jugador recibe varias balas seguidas del mismo tipo de daño va desarrollando inmunidad. La primera bala hace el 100% de daño, la segunda un 50%, la tercera un 25% y la cuarta ya no le haría daño.</p>
+                        <p>En cuanto una bala impacta con el jugador comenzará un temporizador de 15 segundos. Durante estos segundos se cumplirá la inmunidad (o el decremento de daño). En cuanto acaba el tiempo volvería a hacer 100% de daño de ese tipo.</p>
+                        <p>Si el jugador atacante cambiase de tipo de daño, el tiempo de inmunidad se reiniciará y recibirá el 100% de daño. </p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../img/Shooter/damage.gif" alt="Daño" style="width:100%;">
+                </div> 
+            </div>
+            
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Menú principal e interfaz</h2>
+                        <p>Al comenzar el juego hay un menú principal en el que se puede elegir si crear una partida o unirse. Además, está el botón para salir. Una vez haya una partida creada otro jugador podrá unirse. En cuanto un jugador crea una partida, ese jugador aparece en el mapa y ya puede interactuar con los elementos del escenario. Cuando un cliente se conecte podrán pelear.</p>
+                        <p>El jugador puede pausar el juego con la tecla “P”. Cuando el menú de pausa está activo el jugador no podrá interactuar con nada aparte del menú. El menú solo tiene un botón para volver al juego.</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../img/Shooter/menu.png" alt="Menu" style="width:100%;">
+                </div> 
+            </div>
+
+            <div class="row-5">
+                <iframe width="560" height="630" src="https://www.youtube.com/embed/L__f5PzFdJU" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <div class="row-5">
+                <article>
+                    <h3><a href="../pdf/Shooter.pdf" target="_blank" rel="noopener noreferrer">Más informacion</a></h3>
+                </article>
+            </div>
+
+        </section>
+        <!-- PIE -->
+        <footer>
+            <ul>
+                <li>email: <a>laurarmediavilla@gmail.com</a></li>
+                <li>itch.io: <a href="https://tortubob.itch.io/" target="_blank" rel="noopener noreferrer">Laura Rosas</a></li>
+                <li>Web creada por Laura Rosas Mediavilla</li>
+            </ul>
+        </footer>
+    </div>
+    <!--jQuery first, then Popper.js, then Bootstrap JS  -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <div id="ultimo"></div>
+    
+</body>
+
+</html>

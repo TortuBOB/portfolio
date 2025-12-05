@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Laura Rosas</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="StyleSheet" href="../../css/estilo.css" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+    <link rel="icon" href="../../img/icono.ico"/>
+</head>
+
+<body>
+    <div id="container">
+        <!-- CABECERA -->
+        <header>
+            <div class="row justify-content-center">
+                <div class="col-9 align-self-center">
+                    <h1>Portfolio</h1>
+                </div>
+            </div>
+        </header>
+        <!-- BARRA DE NAVEGACIÓN -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark"> <a class="navbar-brand" href="../index.html">Main</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"> <a class="nav-link" href="../projects.html">Projects</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="../about.html">About</a> </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- CONTENIDO CENTRAL -->
+        <section>
+            <header>
+                <h2>QT Application</h2>
+            </header>
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Summary</h2>
+                        <p>This project was made to test how to make a tool with QT, which is used to create interfaces, and to create and use dynamic libraries with C++.</p>
+                        <p>The tool consists of a text editor that exports an XML, which could be used later in an interactive novel type game. All the logic works with a Visual Studio dynamic library project and the interface in another project with QT.</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../../img/qt/Captura.png" alt="Captura" style="width:100%;">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Data model (DLL)</h2>
+                        <p>The dynamic-link library project consists of four classes that handle all the logic of the QT project:</p>
+                        <ul>
+                        <li>Adventure: this class stores a list of dialogs. It has the necessary functions to add and remove dialogs, a function that returns the number of dialogs it has and a function that returns a dialog if you enter the index of it.</li>
+                        <li>Dialog: is the class that represents a dialogue. It has an ID, which is a number to identify it. It also stores other data such as the title, the text, the ID of the next dialogue and a list of possible answers. It has all the necessary functions to modify this data or to read it. As for the answers, it has functions to add and delete them, and also one that returns the number of answers it has and one that returns an answer if the index of the answer is entered in the list.</li>
+                        <li>DialogResponse: is the class that represents the responses of the dialog. It has a text and the ID of the dialog it connects to. It has the necessary functions to modify this data or to read it.</li>
+                        <li>Serializer: this class is in charge of saving and loading XML files. It has a function to save the adventure you are working on, in which you have to include the path where you want to save it. It also has a function to load, which needs the path where the XML is located. This function reads the XML to extract the data, create an adventure with it and then display it in the interface.</li>
+                        </ul>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../../img/qt/dll.png" alt="DLL" style="width:100%;">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Interface (QT)</h2>
+                        <p>The interface has been created in the QT editor, which comes with a window in which different elements can be placed. The window of this project is divided into three columns.</p>
+                        <ul>
+                        <li>In the left column is the list of dialogues, where all dialogues are shown and can be selected. At the bottom there are two buttons, one to add dialogues and one to remove the selected dialogue from the list.</li>
+                        <li>In the middle column is the information of the selected dialogue, which can be modified. In the upper area there is a label, which is text that cannot be modified, where it says "ID", and next to it there is a text box that only accepts numbers, which is where the ID of the dialogue can be modified. Next to this box is another box, which is the title of the dialogue. Underneath is a large text box, which is the content of the dialogue. At the bottom there is a label that says "Next ID" and a text box that only allows numbers, to type the ID of the next dialogue.</li>
+                        <li>In the right column there is a table to create the possible answers and below it two buttons. The table has three columns: the first one shows only the row number, the second one is a modifiable text box, which is the content of the answer, and the third one is the ID of the dialogue to which the answer connects. The buttons are used to add and delete answers, the selected row is deleted. The table is created by adding the elements with code. </li>
+                        </ul>
+                        <p>Apart from this it has a toolbar, where only the "File" option is available. When pressed, two actions appear, "Save" to save the current adventure to XML and "Load" to load an adventure from an XML file. Pressing them will request a path to save or read the file.</p>
+                        <p>To program the different functions that the interface components do, a function called "connect" is used, which detects various actions on the interface and it can be specified what it does as a reaction. Each buttons when pressed call different functions. The list of dialogues changes the information in the rest of the window when another dialogue is selected. Text boxes update their information when something is changed in them.</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../img/cpp/qt.png" alt="QT" style="width:100%;">
+                </div>
+            </div>
+
+            <div class="row-5">
+                <iframe width="560" height="310" src="https://www.youtube.com/embed/gQpvZbChGvk" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <article>
+                        <h2>Libraries</h2>
+                        <p><a href="https://www.qt.io/" target="_blank" rel="noopener noreferrer">QT</a> for the interface</p>
+                        <p><a href="https://rapidxml.sourceforge.net/" target="_blank" rel="noopener noreferrer">RapidXML</a> to read and save XML files</p>
+                    </article>
+                </div>
+            </div>
+
+
+        </section>
+        <!-- PIE -->
+        <footer>
+            <ul>
+                <li>email: <a>laurarmediavilla@gmail.com</a></li>
+                <li>itch.io: <a href="https://tortubob.itch.io/" target="_blank" rel="noopener noreferrer">Laura Rosas</a></li>
+                <li>Web created by Laura Rosas Mediavilla</li>
+            </ul>
+        </footer>
+    </div>
+    <!--jQuery first, then Popper.js, then Bootstrap JS  -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <div id="ultimo"></div>
+    
+</body>
+
+</html>

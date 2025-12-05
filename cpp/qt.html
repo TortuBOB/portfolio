@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Laura Rosas</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="StyleSheet" href="../css/estilo.css" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+    <link rel="icon" href="../img/icono.ico"/>
+</head>
+
+<body>
+    <div id="container">
+        <!-- CABECERA -->
+        <header>
+            <div class="row justify-content-center">
+                <div class="col-9 align-self-center">
+                    <h1>Portfolio</h1>
+                </div>
+            </div>
+        </header>
+        <!-- BARRA DE NAVEGACIÓN -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark"> <a class="navbar-brand" href="../index.html">Main</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"> <a class="nav-link" href="../projects.html">Proyectos</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="../about.html">About</a> </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- CONTENIDO CENTRAL -->
+        <section>
+            <header>
+                <h2>Aplicacion QT</h2>
+            </header>
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Resumen</h2>
+                        <p>Este proyecto fue realizado para probar a hacer una herramienta con QT, que sirve para crear interfaces, y a crear y usar librerías dinámicas con C++.</p>
+                        <p>La herramienta consiste en un editor de textos que exporta un XML, que podría ser usado posteriormente en un juego de tipo novela interactiva. Toda la lógica funciona con un proyecto de Visual Studio de biblioteca dinámica y la interfaz en otro proyecto con QT.</p>
+                    </article>
+                    
+                </div>
+                <div class="col-sm-6">
+                    <img src="../img/qt/Captura.png" alt="Captura" style="width:100%;">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Modelo de datos (DLL)</h2>
+                        <p>El proyecto de la biblioteca dinámica está formado por cuatro clases que se encargan de toda la lógica del proyecto de QT:</p>
+                        <ul>
+                        <li>Adventure: esta clase guarda una lista de diálogos. Tiene las funciones necesarias para añadir y eliminar diálogos, una función que devuelve el número de diálogos que tiene y otra que devuelve un diálogo si introduce el índice del diálogo en la lista.</li>
+                        <li>Dialog: es la clase que representa un diálogo. Tiene un ID, que es un número para identificarlo. Aparte guarda otros datos como el título, el texto, el ID del próximo diálogo y una lista con las posibles respuestas. Tiene todas las funciones necesarias para modificar estos datos o para leerlos. En cuanto a las respuestas, tiene funciones para añadir y eliminarlas, y también otra que devuelve el número de respuestas que tiene y una que devuelve una respuesta si se introduce el índice de la respuesta en la lista.</li>
+                        <li>DialogResponse: es la clase que representa las respuestas del diálogo. Tiene un texto y la ID del diálogo con el que conecta. Tiene las funciones necesarias para modificar estos datos o para leerlos.</li>
+                        <li>Serializer: esta clase se encarga de guardar y cargar información de un XML. Tiene una función para guardar la aventura en la que se está trabajando, en el que se tiene que incluir la ruta donde se quiere guardar. También tiene la función para cargar, que necesita la ruta en el que se encuentra el XML. Esta función lee el XML para sacar los datos, crear una aventura con ellos y luego mostrarlo en la interfaz.</li>
+                        </ul>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../img/qt/dll.png" alt="DLL" style="width:100%;">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Interfaz (QT)</h2>
+                        <p>La interfaz se ha creado en el editor de QT, que viene con una ventana en la que se pueden colocar distintos elementos. La ventana de este proyecto está dividida en tres columnas.</p>
+                        <ul>
+                        <li>En la columna izquierda está la lista de diálogos, donde se muestran todos los diálogos y se pueden seleccionar. En la parte de abajo hay dos botones, uno para añadir diálogos y otro para eliminar el que esté seleccionado en la lista.</li>
+                        <li>En la columna central está la información del diálogo seleccionado, que se puede modificar. En la zona superior hay una etiqueta, que es texto que no se puede modificar, en la que pone “ID”, y al lado hay una caja de texto que solo acepta números, que es donde se puede modificar el ID del diálogo. Al lado de esta caja hay otra, que es el título del diálogo. Debajo hay una gran caja de texto, que es el contenido del diálogo. En la parte inferior hay una etiqueta que pone “Next ID” y una caja de texto que solo permite números y es para escribir cual es el ID del siguiente diálogo.</li>
+                        <li>En la columna de la derecha hay una tabla para crear las posibles respuestas y debajo dos botones. La tabla tiene tres columnas: la primera solo muestra el número de la fila, la segunda es una caja de texto modificable, que es el contenido de la respuesta, y la tercera es el ID del diálogo con el que conecta la respuesta. Los botones sirven para añadir y eliminar respuestas, se elimina la fila que este seleccionada. La tabla se crea añadiendo los elementos con código. </li>
+                        </ul>
+                        <p>Aparte de esto tiene una barra de herramientas, en la que únicamente está la opción “File”. Cuando se pulsa salen dos acciones, “Save” para guardar la aventura actual en un XML y “Load” para cargar una aventura de un archivo XML. Al pulsarlos pedirá una ruta para guardar o leer el archivo.</p>
+                        <p>Para programar las distintas funciones que hacen los componentes de la interfaz se usa una función llamada “connect” que detecta distintas acciones en la interfaz y se puede especificar lo que hace como reacción. Los botones cuando son pulsados llaman a distintas funciones. La lista de los diálogos cambia la información del resto de la ventana cuando se selecciona otro diálogo. Los cuadros de texto actualizan su información cuando se cambia algo en ellos.</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../img/qt/qt.png" alt="QT" style="width:100%;">
+                </div>
+            </div>
+
+            <div class="row-5">
+                <iframe width="560" height="310" src="https://www.youtube.com/embed/gQpvZbChGvk" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <article>
+                        <h2>Bibliotecas</h2>
+                        <p><a href="https://www.qt.io/" target="_blank" rel="noopener noreferrer">QT</a> para la interfaz</p>
+                        <p><a href="https://rapidxml.sourceforge.net/" target="_blank" rel="noopener noreferrer">RapidXML</a> para leer y guardar archivos XML</p>
+                    </article>
+                </div>
+            </div>
+
+
+        </section>
+        <!-- PIE -->
+        <footer>
+            <ul>
+                <li>email: <a>laurarmediavilla@gmail.com</a></li>
+                <li>itch.io: <a href="https://tortubob.itch.io/" target="_blank" rel="noopener noreferrer">Laura Rosas</a></li>
+                <li>Web creada por Laura Rosas Mediavilla</li>
+            </ul>
+        </footer>
+    </div>
+    <!--jQuery first, then Popper.js, then Bootstrap JS  -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <div id="ultimo"></div>
+    
+</body>
+
+</html>

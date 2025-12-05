@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Laura Rosas</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="StyleSheet" href="../css/estilo.css" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+    <link rel="icon" href="../img/icono.ico"/>
+</head>
+
+<body>
+    <div id="container">
+        <!-- CABECERA -->
+        <header>
+            <div class="row justify-content-center">
+                <div class="col-9 align-self-center">
+                    <h1>Portfolio</h1>
+                </div>
+            </div>
+        </header>
+        <!-- BARRA DE NAVEGACIÓN -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark"> <a class="navbar-brand" href="../index.html">Main</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"> <a class="nav-link" href="../projects.html">Proyectos</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="../about.html">About</a> </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- CONTENIDO CENTRAL -->
+        <section>
+            <header>
+                <h2>Tank Game</h2>
+            </header>
+            <div class="row-5">
+                <article>
+                    <h2>Detalles Técnicos</h2>
+                    <p>Desarrollado en Unity</p>
+                    <p>Un jugador</p>
+                    <p>Género: Acción en tiempo real</p>
+                    <p>Plataforma: Ordenador</p>
+                </article>
+            </div>
+            
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Resumen</h2>
+                        <p>Videojuego en el que tomas el control de un tanque y tendrás que hacerte paso entre varios obstáculos y enemigos para sobrevivir.</p>
+                        <p>Para ser el mejor tendrás que matar al mayor número posible de enemigos.</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../img/Tank/ScreenShoot.png" alt="Screenshot" style="width:90%;">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Mecánicas</h2>
+                        <p>El jugador controla al tanque con las teclas “WASD”. Con “W” avanza hacia donde el tanque este mirando, con “S” va en el sentido contrario. “A” y “D” rotan el tanque sobre sí mismo, así cambiando hacia donde mira.</p>
+                        <p>El juego tiene una cámara en perspectiva cenital que sigue al tanque.</p>
+                        <h4>Tipos de disparo</h4>
+                        <p>Disparo normal: es un ataque más rápido que el del misil que se ejecuta al pulsar el click izquierdo del ratón. Este disparo funciona calculando contra que impacta al darle al botón y salen unas partículas de disparo y otras de impacto, sin instanciar ningún objeto que se esté moviendo (con un Raycast).</p>
+                        <p>Disparo de misil: el misil se dispara con el click derecho. En este caso el disparo funciona instanciando el misil, el cual se va moviendo y si entra en colisión explota (puede ser con paredes, con enemigos y también será destruido tras una distancia recorrida)</p>
+                        <p>Cada disparo tiene una munición independiente y se muestran en la pantalla en la zona superior derecha. Debajo de la munición está indicado la salud que le queda al tanque del jugador. El jugador parpadea en rojo cuando recibe daño.</p>
+                        <h4>Puntuación</h4>
+                        <p>El juego tiene un sistema de puntuación que se calcula por el número de enemigos que mata el jugador. Los tanques tienen más valor que los soldados. La puntuación se muestra en la zona inferior izquierda de la pantalla.</p>
+                        <p>El juego tiene un sistema que guarda la mejor puntuación que tienes en cada nivel.</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../img/Tank/Controles.png" alt="Controles y HUD" style="width:90%;">
+                    <p></p>
+                    <img src="../img/Tank/FinNivel.png" alt="Mejor puntuación" style="width:90%;">
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Peligros</h2>
+                        <p>Hay tres tipos de peligro:</p>
+                        <p>Pinchos: están fijos, pero desaparecen y aparecen tras cierta cantidad de tiempo.</p>
+                        <p>Sierras: se mueven de un punto fijo a otro y si el jugador entra en contacto con ellas recibirá daño.</p>
+                        <p>Agua: es equivalente al daño por caer al vacío, matan instantáneamente al jugador.</p>
+                        <p></p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../img/Tank/Peligros.png" alt="Peligros" style="width:90%;">
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Enemigos</h2>
+                        <p>Hay dos tipos de enemigos, todos tienen un sistema de salud, cuando son dañados parpadean en blanco y al morir lanzan unas partículas de explosión</p>
+                        <p>Soldados: estos enemigos atacan con el mismo sistema que el disparo normal del jugador, no tienen misiles. Si ven al jugador y no está a rango de disparo se acercarán al jugador hasta que puedan disparar. Luego se pararán y seguirán al jugador con la mirada disparando hasta que este se aleje, que entonces se volverá a acercar. Si el jugador los atropella o los dispara hasta que se queden sin vida morirán.</p>
+                        <p>Tanques: funcionan de una forma muy similar a los soldados, solo que los tanques disparan únicamente misiles, y tampoco se ven afectados si el jugador choca contra ellos. Tienen más vida que los soldados.</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../img/Tank/Enemigos.png" alt="Enemigos" style="width:90%;">
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Ítems</h2>
+                        <p>Hay tres tipos de ítems:</p>
+                        <p>Munición del disparo normal: aumenta la munición del disparo normal.</p>
+                        <p>Munición del disparo de misil: aumenta el número de misiles que tiene el jugador.</p>
+                        <p>Salud: aumenta los puntos de salud que tiene el jugador.</p>
+                        <p></p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../img/Tank/Items.png" alt="Peligros" style="width:90%;">
+                </div>
+            </div>
+            
+            <div class="row-5">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/YxTlUFLm-3Q" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                <article>
+                    <h4>Créditos</h4>
+                    <p>Programación: Laura Rosas Mediavilla</p>
+                    <p>Arte: <a href="https://assetstore.unity.com/" target="_blank" rel="noopener noreferrer"> Unity Asset Store</a> </p>
+                </article>
+                </div>
+            </div>
+
+        </section>
+        <!-- PIE -->
+        <footer>
+            <ul>
+                <li>email: <a>laurarmediavilla@gmail.com</a></li>
+                <li>itch.io: <a href="https://tortubob.itch.io/" target="_blank" rel="noopener noreferrer">Laura Rosas</a></li>
+                <li>Web creada por Laura Rosas Mediavilla</li>
+            </ul>
+        </footer>
+    </div>
+    <!--jQuery first, then Popper.js, then Bootstrap JS  -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <div id="ultimo"></div>
+    
+</body>
+
+</html>

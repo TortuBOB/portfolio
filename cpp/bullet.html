@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Laura Rosas</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="StyleSheet" href="../css/estilo.css" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+    <link rel="icon" href="../img/icono.ico"/>
+</head>
+
+<body>
+    <div id="container">
+        <!-- CABECERA -->
+        <header>
+            <div class="row justify-content-center">
+                <div class="col-9 align-self-center">
+                    <h1>Portfolio</h1>
+                </div>
+            </div>
+        </header>
+        <!-- BARRA DE NAVEGACIÓN -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark"> <a class="navbar-brand" href="../index.html">Main</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"> <a class="nav-link" href="../projects.html">Proyectos</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="../about.html">About</a> </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- CONTENIDO CENTRAL -->
+        <section>
+            <header>
+                <h2>3D Physics</h2>
+            </header>
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Resumen</h2>
+                        <p>Este proyecto es el primero en el que se usa la biblioteca de físicas de Bullet. En este proyecto se monta un escenario 3D con objetos que simulan físicas de distintas maneras para aprender a usar esta biblioteca. </p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../img/fisicas/Captura.png" alt="Captura" style="width:100%;">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Entidades y Sensores</h2>
+                        <p>Una entidad es un objeto formado por un cuerpo rígido y un modelo 3D. Hay tres tipos de entidades: cubos, cilindros y esferas.</p>
+                        <p>La parte física de la entidad, el cuerpo rígido (rigidbody), puede ser dinámica, que simula las físicas (gravedad, se mueve al chocar contra algo…), estática, que no se puede mover, y cinemática (kinematic), que no simula las físicas, pero se puede mover.</p>
+                        <p>Un sensor es un objeto que detecta colisiones, pero a diferencia de una entidad, se puede atravesar. Los sensores tienen forma de cubo y pueden tener un modelo o ser invisibles.</p>
+                        <p>Hay una llave que es un sensor, sirve para abrir una puerta. En este caso tiene parte visible (un modelo de una llave) y el cubo que detecta las colisiones es del tamaño justo para ocupar todo el modelo.</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../img/fisicas/entidades.png" alt="Entidad" style="width:100%;">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Coche</h2>
+                        <p>Un coche es un objeto formado por varias entidades. El cuerpo es un cubo y luego tiene cuatro ruedas que son cilindros. También tiene dos cilindros entre el cuerpo y las ruedas delanteras, mientras que las ruedas de atrás están unidas al coche directamente. Todas estas entidades son dinámicas.</p>
+                        <p>El coche se puede controlar con “WASD”. Cuando el usuario presiona la tecla “W” todas las ruedas comenzaran a rotar sobre sí mismas, y gracias al rozamiento con el suelo se mueve el coche. Con la “S” rotan, pero en el sentido contrario para desplazarse hacia atrás. Las teclas “A” y “D” hacen que giren los cilindros delanteros que unen el cuerpo con las ruedas, haciendo que las ruedas estén giradas, y así el coche avanza hacia la derecha o la izquierda.</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../img/fisicas/car.gif" alt="Coches" style="width:80%;">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Puerta y Plataforma</h2>
+                        <p>La puerta está formada por una entidad en forma de cubo dinámica, y un cilindro estático. Ambos están unidos y cuando el usuario coge la llave se activa un motor que hace que la puerta gire sobre el cilindro abriéndose.</p>
+                        <p>La plataforma, que sirve para cruzar un agujero, está formada por un cubo cinemático y un sensor invisible. El sensor está encima de la plataforma y cuando el coche lo toca, la plataforma cruza el agujero.</p>
+                    </article>
+                    <article>
+                        <h2>Escena</h2>
+                        <p>La escena se encarga de crear la cámara y la luz. Aparte de esto genera todo el escenario, el suelo, las paredes, y el resto de objetos.</p>
+                        <p>La escena también se encarga de comprobar las colisiones entre los sensores y los objetos correspondientes, y realiza las acciones pertinentes cuando lo detecta.</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../img/fisicas/door.gif" alt="Escena" style="width:80%;">
+                </div>
+            </div>
+            
+            <div class="row-5">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/0PAhVbjoIFs" title="Físicas 3D en C++" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            
+            <div class="row">
+                <div class="col-sm-6">
+                    <article>
+                        <h2>Bibliotecas</h2>
+                        <p><a href="https://www.sfml-dev.org/" target="_blank" rel="noopener noreferrer">SFML</a> para crear la ventana</p>
+                        <p><a href="https://github.com/bulletphysics/bullet3" target="_blank" rel="noopener noreferrer">Bullet Physics</a> para las físicas</p>
+                        <p><a href="https://bitbucket.org/angel-esne/opengl-toolkit/src/master/" target="_blank" rel="noopener noreferrer">OpenGl-Toolkit</a> para el sistema de render</p>
+                        <p><a href="https://github.com/g-truc/glm" target="_blank" rel="noopener noreferrer">GLM</a> para calculos matemáticos</p>
+                        <p><a href ="https://sketchfab.com/3d-models/key-655394e6b4634d5fa60356e64624521b " target="_blank" rel="noopener noreferrer">Modelo de la llave</a></p>
+                    </article>
+                </div>
+            </div>
+
+        </section>
+        <!-- PIE -->
+        <footer>
+            <ul>
+                <li>email: <a>laurarmediavilla@gmail.com</a></li>
+                <li>itch.io: <a href="https://tortubob.itch.io/" target="_blank" rel="noopener noreferrer">Laura Rosas</a></li>
+                <li>Web creada por Laura Rosas Mediavilla</li>
+            </ul>
+        </footer>
+    </div>
+    <!--jQuery first, then Popper.js, then Bootstrap JS  -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <div id="ultimo"></div>
+    
+</body>
+
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Laura Rosas</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="StyleSheet" href="../../css/estilo.css" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+    <link rel="icon" href="../../img/icono.ico"/>
+</head>
+
+<body>
+    <div id="container">
+        <!-- CABECERA -->
+        <header>
+            <div class="row justify-content-center">
+                <div class="col-9 align-self-center">
+                    <h1>Portfolio</h1>
+                </div>
+            </div>
+        </header>
+        <!-- BARRA DE NAVEGACIÓN -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark"> <a class="navbar-brand" href="../index.html">Main</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"> <a class="nav-link" href="../projects.html">Projects</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="../about.html">About</a> </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- CONTENIDO CENTRAL -->
+        <section>
+            <header>
+                <h2>Dusk of Mankind</h2>
+            </header>
+            <div class="row-5">
+                <article>
+                    <h2>Technical details</h2>
+                    <p>Developed in Unity</p>
+                    <p>Single-player</p>
+                    <p>Genre: Clicker</p>
+                    <p>Platform: Android</p>
+                </article>
+            </div>
+            
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Summary</h2>
+                        <p>This mobile game is a clicker type game in which you will have to tap the screen repeatedly to eliminate enemies.
+                        </p>
+                        <p>When you kill enemies they will give you coins and they might give you diamonds too. With these resources you can buy upgrades that will help you progress through the game.</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../../img/Dusk/resumen.png" alt="Screenshots" style="width:90%;">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Mechanics</h2>
+                        <p>The game is multi-touch, which means that you can press the screen with more than one finger at a time, generating many projectiles.</p>
+                        <p>In the menu you can adjust the volume of music and sound separately.</p>
+                        <p>The player owns a number of resources (coins and diamonds) that will be used to buy upgrades in the shops. These are obtained by killing enemies.</p>
+                        <h4>Allies shop</h4>
+                        <p>In this shop you can buy both an upgrade for the player's projectile (increases attack) and four allies. Once allies are purchased you can upgrade them in this shop as well.</p>
+                        <p>The resource used in this shop is coins.</p>
+                        <h4>Power-Ups Shop</h4>
+                        <p>In this shop you can buy two power-ups. One power-up doubles the player's attack for one minute. The other power-up improves the attack of all allies by 30% for 40 seconds.</p>
+                        <p>The resource used in this shop is diamonds.</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../../img/Dusk/tiendas.png" alt="Tiendas" style="width:90%;">
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Game cycle</h2>
+                        <p>As soon as the game starts, there will be five enemies on the left side of the screen. Each has a life bar above his head. Apart from this there is a global health bar at the top of the screen (the red bar).</p>
+                        <p>Enemies are divided into hordes. Each horde has five enemies, each time you eliminate a horde another one will appear. Apart from this the progress bar, which is the green bar above the health bar, will increase.</p>
+                        <p>Once the progress bar is full, the last horde of the level will arrive. In this horde there is a time limit in which you have to eliminate the enemies or you lose. This time is reflected in a bar that appears below the health bar of the enemies.</p>
+                        <p>If time runs out you go back to the beginning of that level, and if you manage to kill the enemies you move on to the next level (which has a different scenario in the background).</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../img/unity/barras.png" alt="Barras" style="width:100%;">
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Enemies and Allies</h2>
+                        <p>All enemies and allies have certain characteristics: a certain amount of health, attack damage and time it takes to attack.</p>
+                        <p>Allies attack enemies, helping the player to advance faster.</p>
+                        <p>Enemies attack allies and lower their health. When an ally is killed, they will not attack for a few seconds (and can't be attacked either) and then they will recover their health and will be able to attack again. Depending on the ally they will be dead for more or less time.</p>
+                        <p>Enemies that die simply disappear and give coins. The coins are random between two numbers, these numbers change depending on the enemy, so each type gives different amounts of coins.</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../../img/Dusk/enemigos.png" alt="Enemigos y aliados" style="width:60%;">
+                </div>
+            </div>
+            
+            <div class="row-5">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/9YYrIBeLFRw" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                <article>
+                    <h4>Credits</h4>
+                    <p>Programming: Laura Rosas Mediavilla</p>
+                    <p>Art: Beatriz Sánchez López-Coronado</p>
+                    <div class="pad">
+                    <div class="insta">
+                        <a href="https://instagram.com/beatrizcoronadoo?igshid=NTc4MTIwNjQ2YQ==" target="_blank" rel="noopener noreferrer">
+                        <img src="../../img/Redes/ig.png" alt="Instagram" class="imgResponsive" width="50" height="50"></a>
+                    </div>
+                    <div class="artstation">
+                        <a href="https://www.artstation.com/beatrizcoronado" target="_blank" rel="noopener noreferrer">
+                        <img src="../../img/Redes/artStation.png" alt="Artstation" class="imgResponsive" width="50" height="50"></a>
+                    </div>
+                    </div>                    
+                    <p>Sound and music: <a href="https://freesound.org/" target="_blank" rel="noopener noreferrer">freesound</a> </p>
+                </article>
+                </div>
+            </div>
+
+        </section>
+        <!-- PIE -->
+        <footer>
+            <ul>
+                <li>email: <a>laurarmediavilla@gmail.com</a></li>
+                <li>itch.io: <a href="https://tortubob.itch.io/" target="_blank" rel="noopener noreferrer">Laura Rosas</a></li>
+                <li>Web created by Laura Rosas Mediavilla</li>
+            </ul>
+        </footer>
+    </div>
+    <!--jQuery first, then Popper.js, then Bootstrap JS  -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <div id="ultimo"></div>
+    
+</body>
+
+</html>

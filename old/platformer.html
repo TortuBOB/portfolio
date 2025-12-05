@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Laura Rosas</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="StyleSheet" href="../css/estilo.css" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+    <link rel="icon" href="../img/icono.ico"/>
+</head>
+
+<body>
+    <div id="container">
+        <!-- CABECERA -->
+        <header>
+            <div class="row justify-content-center">
+                <div class="col-9 align-self-center">
+                    <h1>Portfolio</h1>
+                </div>
+            </div>
+        </header>
+        <!-- BARRA DE NAVEGACIÓN -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark"> <a class="navbar-brand" href="../index.html">Main</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"> <a class="nav-link" href="../projects.html">Proyectos</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="../about.html">About</a> </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- CONTENIDO CENTRAL -->
+        <section>
+            <header>
+                <h2>2D Platformer</h2>
+            </header>
+            <div class="row-5">
+                <article>
+                    <h2>Detalles Técnicos</h2>
+                    <p>Desarrollado en Unity</p>
+                    <p>Un jugador</p>
+                    <p>Género: Plataformas 2D</p>
+                    <p>Plataforma: Ordenador</p>
+                </article>
+            </div>
+            
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Resumen</h2>
+                        <p>Este juego para ordenador es un plataformas 2D con un sistema que genera el nivel mientras lo juegas, haciendo que cada vez que juegas sea distinto.</p>
+                        <p>El juego es infinito en cuanto a que el nivel se genera constantemente y no tiene final, la única forma de que se acabe es muriendo.</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../img/Platformer/Screenshot.png" alt="Screenshot" style="width:90%;">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Mecánicas</h2>
+                        <p>El jugador se puede mover por el nivel con las teclas “A” y “D”, para saltar es la tecla del espacio. La cámara sigue al jugador en el eje X con un offset para que puedas ver mejor las plataformas. Además, la cámara tiene un efecto de delay cuando sigue al personaje jugable.</p>
+                        <p>El personaje jugable tiene un sistema de salud, la cual se muestra con una barra en la esquina superior izquierda.</p>
+                        <p>En la esquina superior derecha se muestra la puntuación que tiene el jugador y debajo el número de monedas que ha recogido. La puntuación se calcula con las monedas recogidas.</p>
+                        <p>El juego también cuenta con plataformas que se mueven horizontalmente y verticalmente de un punto fijo a otro.</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../img/Platformer/hud.png" alt="HUD" style="width:90%;">
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Peligros</h2>
+                        <p>En el juego hay dos tipos de peligros: caerse al vacío, que te mata instantáneamente, y los enemigos, que te quitan parte de la vida.</p>
+                        <p>Los enemigos se pueden mover de dos formas distintas: de arriba abajo, entre plataformas, para que el salto sea más difícil, y de derecha a izquierda, en plataformas algo más largas, para que no te mantengas en esas plataformas mucho tiempo y obligarte a moverte más rápido para no perder vida.</p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../img/Platformer/enemigos.png" alt="Peligros" style="width:90%;">
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-sm-5">
+                    <article>
+                        <h2>Generación del nivel</h2>
+                        <p>El nivel se genera con un sistema de bloques. Los bloques están creados con antelación (son prefabs). Todos los bloques tienen un punto inicial, un punto final, una zona de salida y la zona de muerte.</p>
+                        <p>El punto inicial es el punto a partir del que se genera el bloque. El punto final es donde se genera el siguiente bloque. El punto inicial de un bloque estaría donde está el punto final del anterior bloque.</p>
+                        <p>La zona de salida está después del punto final. Una vez el jugador pase por la zona de salida, se destruirá el bloque por el que acaba de pasar y se creará uno nuevo a continuación de los que ya están en el mapa.</p>
+                        <p>La zona de muerte es la caída al vacío. Está por debajo de la visión de la cámara y mata al personaje jugable si lo atraviesa. </p>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <img src="../img/Platformer/bloque.png" alt="Bloque" style="width:90%;">
+                </div>
+            </div>
+            
+            <div class="row-5">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/5wd7PQHkAl8" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                <article>
+                    <h4>Créditos</h4>
+                    <p>Programación: Laura Rosas Mediavilla</p>
+                    <p>Música: <a href="https://freesound.org/" target="_blank" rel="noopener noreferrer">freesound</a> </p>
+                </article>
+                </div>
+            </div>
+
+        </section>
+        <!-- PIE -->
+        <footer>
+            <ul>
+                <li>email: <a>laurarmediavilla@gmail.com</a></li>
+                <li>itch.io: <a href="https://tortubob.itch.io/" target="_blank" rel="noopener noreferrer">Laura Rosas</a></li>
+                <li>Web creada por Laura Rosas Mediavilla</li>
+            </ul>
+        </footer>
+    </div>
+    <!--jQuery first, then Popper.js, then Bootstrap JS  -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <div id="ultimo"></div>
+    
+</body>
+
+</html>
